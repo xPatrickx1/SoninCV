@@ -1,0 +1,103 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Evgeniy Sonin
+
+  body
+
+    header
+      a.logo(href='index.html')
+        span.logo_img
+
+      nav.navbar.navbar-default.col-sm-offset-5
+        .container-fluid
+          .navbar-header
+            button.navbar-toggle.collapsed.hamburger-menu(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+              .bar
+
+          #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            ul.nav.navbar-nav
+              li.navbar_item
+                a.navbar_link(href='#') skills 
+                  span.sr-only
+              li.navbar_item
+                a.navbar_link(href='#') biography
+              li.navbar_item
+                a.navbar_link(href='#') works
+                  span.sr-only
+              li.navbar_item
+                a.navbar_link(href='#') contacts
+
+
+
+    .section1
+      .section_me
+        img.section_img(src='src/images/me.png')
+      .section1_title
+        h1 About me
+        p
+        |Hi, my name is Evgeniy Sonin.
+        =' '
+        br
+        | I am front-end developer,
+        =' '
+        br
+        | kitesurfer and snouborder
+
+//
+    .section2
+      nav.navbar.navbar-default
+        .container-fluid
+          .navbar-header
+            button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+
+          #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            ul.nav.navbar-nav
+              li
+                a(href='#')
+                  | Link
+                  span.sr-only (current)
+              li
+                a(href='#') Link
+
+
+
+      nav.menu#menu
+        ul.menu__list.list.animation
+          li.list__item
+            a.list__link(href='#section2') services
+          li.list__item
+            a.list__link(href='#section3') clients
+          li.list__item
+            a.list__link(href='#section4') team
+          li.list__item
+            a.list__link(href='#section5') contact
+      nav.mobile
+        button.menu_button Toggle
+          .icon
+        .mobile__menu#mySidenav.sidenav
+
+          ul.mobile__list
+            li.mobile__item
+              a.mobile__link(href='#section1') about us
+            li.mobile__item
+              a.mobile__link(href='#section2') services
+            li.mobile__item
+              a.mobile__link(href='#section3') clients
+            li.mobile__item
+              a.mobile__link(href='#section4') team
+            li.mobile__item
+              a.mobile__link(href='#section5') contact
+
+
+
+
+
+//.offset-1.col-10.offset-md-2.col-md-6.offset-lg-2.col-lg-6.offset-xl-2.col-xl-4
