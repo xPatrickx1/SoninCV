@@ -3980,6 +3980,33 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   display: block;
   padding: 10px 15px;
 }
+
+@media (max-width: 768px) {
+  /*.nav:before {
+    content:'';
+    height: 100%;
+    display: inline-block;
+  }
+
+  .nav > li {
+    /*display: table-row;*/
+/*    display: inline-block
+  }*/
+
+  .nav > li > a {
+    /*display: table-cell;*/
+    vertical-align: middle;
+    text-align: center;
+
+  }
+  .navbar-nav > li > a {
+    padding-top: 9vh !important;
+  }
+  /*ul:before, li {
+    vertical-align: middle;
+  }*/
+}
+
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
@@ -4161,7 +4188,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar {
   position: absolute;
   min-height: 50px;
-  width:100%;
   margin-top:50px;
 }
 @media (min-width: 768px) {
@@ -4175,8 +4201,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-collapse {
-  padding-right: 15px;
-  padding-left: 15px;
   margin-top: 40px;
   overflow-x: visible;
   -webkit-overflow-scrolling: touch;
@@ -4187,8 +4211,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-collapse.in {
   overflow-y: auto;
   height:100%;
-  background: #000;
 }
+
 @media (min-width: 768px) {
   .navbar-collapse {
     width: auto;
@@ -4533,6 +4557,21 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 
 }
 @media (max-width: 767px) {
+  .navbar {
+    width:100%;
+    margin-top: 0;
+  }
+
+  .navbar-nav {
+    margin: 0;
+  }
+
+  .nav {
+    height: calc(100vh - 150px);
+    width: 100%;
+    display: table;
+  }
+
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: #777;
   }

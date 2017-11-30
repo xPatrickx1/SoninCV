@@ -11,22 +11,7 @@ body {
   cursor: pointer; }
 
 .navbar_item {
-  text-align: center;
-  opacity: 0; }
-
-.navbar-collapse.in .navbar_item {
-  top: 0;
-  animation: setMenu 0.4s ease forwards;
-  transition-delay: 0s;
-  animation-duration: 0.4s; }
-
-@keyframes setMenu {
-  from {
-    opacity: 0;
-    top: 200px; }
-  to {
-    opacity: 1;
-    top: 0; } }
+  text-align: center; }
 
 .navbar_link {
   font-family: sans-serif;
@@ -70,12 +55,12 @@ body {
     transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1); }
 
 .logo {
-  height: 150px;
+  height: 110px;
   width: 140px;
   position: absolute;
-  top: 80px;
+  top: 100px;
   left: 80px;
-  z-index: 9; }
+  z-index: 999; }
   .logo .logo_img {
     background: url("/src/images/logo.png") no-repeat center center;
     -webkit-background-size: 100%;
@@ -83,6 +68,14 @@ body {
     display: inline-block;
     height: 100%;
     width: 100%; }
+
+.logo .logo_img:hover {
+  background: url("/src/images/logoSun.png") no-repeat center center;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  -webkit-transition: background 0.5s ease;
+  -moz-transition: background 0.5s ease;
+  transition: background 0.5s ease; }
 
 .section1 {
   background: url("/src/images/headerbg.jpg") no-repeat center;
@@ -117,11 +110,45 @@ body {
 
 @media screen and (max-width: 767px) {
   .logo {
-    height: 100px;
+    height: 80px;
     width: 100px;
     position: absolute;
-    top: 25px;
-    left: 25px; }
+    top: 30px;
+    left: 30px; }
+  .hamburger-menu {
+    margin-top: 50px; }
+  .navbar_list {
+    background: transparent; }
+  .navbar_item {
+    width: 100%;
+    opacity: 0; }
+  .navbar_link {
+    font-size: 1.8em;
+    height: 100%; }
+  .navbar-collapse.in .navbar_item {
+    top: 0;
+    vertical-align: middle;
+    text-align: center;
+    height: calc(25% + 1px);
+    background: #000;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #c3c3c3;
+    border-bottom: 1px solid #c3c3c3; }
+  .transform {
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    -ms-transition: all 2s ease;
+    transition: all 2s ease; }
+  .transform-active {
+    background-color: #45CEE0; }
+  .col1 {
+    background: red;
+    width: 100%;
+    height: 100px; }
+  .col1 {
+    background: green; }
   .section1 {
     overflow: hidden; }
   .section_me {
