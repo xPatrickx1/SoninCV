@@ -1,3 +1,37 @@
+
+
+@keyframes typewriter
+  from
+    width: 0
+
+  to
+    width: 7em
+
+
+@keyframes blinkTextCursor
+  from
+    border-right-color: rgba(255, 255, 255, 0.75)
+
+  to
+    border-right-color: transparent
+
+
+@keyframes flipInX
+  0%
+    transform: perspective(400px) rotateX(90deg)
+    opacity: 1
+
+  100%
+    transform: perspective(400px) rotateX(0deg)
+    opacity: 1
+
+@keyframes opaCity
+  0%
+    opacity: 0
+
+  100%
+    opacity: 1
+
 @keyframes setMenu
   from
     opacity: 0
@@ -20,3 +54,5 @@
         animation-delay: 0.3s
       &:nth-child(4)
         animation-delay: 0.4s
+
+

@@ -27,7 +27,10 @@ body {
   letter-spacing: 1px;
   font-size: 1.6em;
   color: #c3c3c3;
-  padding: 10px 20px; }
+  padding: 10px 20px;
+  opacity: 0;
+  animation: flipInX .6s ease forwards;
+  animation-delay: 1.5s; }
 
 .navbar_link:hover, .navbar_link:active {
   letter-spacing: 3px;
@@ -97,8 +100,11 @@ body {
   position: absolute;
   top: 100px;
   left: 80px;
-  z-index: 999;
-  transition: all 0.5s ease; }
+  z-index: 500;
+  transition: all 0.5s ease;
+  opacity: 0;
+  animation: flipInX .6s ease forwards;
+  animation-delay: 1.5s; }
   .logo .logo_img {
     background: url("/src/images/logo.png") no-repeat center center;
     -webkit-background-size: 100%;
@@ -128,7 +134,10 @@ body {
     right: 12%;
     transition: all 1s ease;
     overflow: hidden;
-    width: 600px; }
+    width: 600px;
+    opacity: 0;
+    animation: opaCity .6s ease forwards;
+    animation-delay: 1.5s; }
   .section1 .section_img {
     position: absolute;
     margin: 0 auto;
@@ -144,7 +153,10 @@ body {
   font-size: 2em;
   line-height: 1.5em;
   color: #c3c3c3;
-  transition: all 0.5s ease; }
+  transition: all 0.5s ease;
+  opacity: 0;
+  animation: opaCity .6s ease forwards;
+  animation-delay: 1.5s; }
   .section1_title h1 {
     font-size: 2.3em; }
 
@@ -167,7 +179,10 @@ body {
     opacity: 0; }
   .navbar_link {
     font-size: 1.8em;
-    height: 100%; }
+    height: 100%;
+    opacity: 1;
+    animation: none;
+    animation-delay: 0s; }
   .navbar_link:after, .navbar_link:before {
     border: none; }
   .navbar-collapse.in .navbar_item {
