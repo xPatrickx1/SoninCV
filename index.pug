@@ -5,26 +5,97 @@ html(lang='en')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
 
-    title Landing1
+    title Evgeniy Sonin
 
     link(href='/src/styles/css/style.css', rel='stylesheet')
     link(rel="icon", type="image/png", href="/src/images/favicon.png")
     link(href='/lib/bootstrap.css', rel='stylesheet')
-
-    //link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
-    //link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous")
+    link(href='/lib/jquery.fullPage.css', rel='stylesheet')
 
     script(type="text/javascript" src="lib/jquery-3.2.1.min.js")
+    script(type="text/javascript" src="lib/jquery.fullPage.js")
 
-    //script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
     script(type="text/javascript" src="src/js/main.js")
 
   body
 
+    .loader_box
+      .loader
+        p.line-1.anim-typewriter made by sonin
 
 
-    include header.pug
+
+
+    #fullpage
+      .section.section1.active
+        header
+          a.logo.animation(href='index.html')
+            span.logo_img
+
+          nav.navbar.navbar-default.col-sm-offset-3.col-md-offset-5
+            .container-fluid
+              .navbar-header
+                button.navbar-toggle.collapsed.hamburger-menu(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+                  .bar
+
+              #bs-example-navbar-collapse-1.collapse.navbar-collapse
+                ul.nav.navbar-nav.navbar_list
+                  li.navbar_item
+                    a.navbar_link(href='#') skills
+                    span.col1
+                  li.navbar_item
+                    a.navbar_link(href='#') biography
+                  li.navbar_item
+                    a.navbar_link(href='#') works
+                      span.sr-only
+                  li.navbar_item
+                    a.navbar_link(href='#') contacts
+
+        .section_me
+          img.section_img(src='src/images/me.png')
+        .section1_title
+          h1 About me
+          p
+          | Hi, my name is Evgeniy Sonin.
+          =' '
+          br
+          | I am front-end developer,
+          =' '
+          br
+          | kitesurfer and snouborder.
+
+
+      .section.section2.container
+        h1.skills_header.col-xl-offset-3 skills
+        ul.skills_list
+          li.skills_item.mov
+            .skills_img.skills_img__html
+          li.skills_item
+            .skills_img.skills_img__css
+          li.skills_item
+            .skills_img.skills_img__less
+          li.skills_item
+            .skills_img.skills_img__sass
+          li.skills_item
+            .skills_img.skills_img__javas
+          li.skills_item
+            .skills_img.skills_img__jquery
+          li.skills_item
+            .skills_img.skills_img__bootstrap
+          li.skills_item
+            .skills_img.skills_img__bem
+          li.skills_item
+            .skills_img.skills_img__git
+          li.skills_item
+            .skills_img.skills_img__gulp
+          li.skills_item
+            .skills_img.skills_img__node
+          li.skills_item
+            .skills_img.skills_img__photoshop
+          li.skills_item
+            .skills_img.skills_img__premier
 
 
 

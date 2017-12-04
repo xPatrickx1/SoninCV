@@ -1,0 +1,123 @@
+.section2
+  background: #000
+
+.skills_header
+  font-size: 11em
+  position: relative
+  color: #c3c3c3
+  left: 10%
+  text-transform: inherit
+  font-weight: 600
+  margin-top: 0
+
+.skills_list
+  padding: 0
+  text-align: center
+  max-width: 1120px
+  margin: 50px auto
+
+
+.skills_item
+  list-style: none
+  display: inline-block
+  width: 120px
+  height: 120px
+  margin: 2%
+  opacity: 0
+
+@for $i from 1 through 13
+  .section2.active
+    .skills_item:nth-child(#{$i})
+      -webkit-animation-delay: ($i * 0.1) + s
+      animation-delay: ($i * 0.1) + s
+
+
+.section2.active
+  .skills_item
+    animation: flipInY 1s ease forwards
+    animation-delay: .4s
+
+.skills_img
+  border: 3px solid #c3c3c3
+  -webkit-border-radius: 50%
+  -moz-border-radius: 50%
+  border-radius: 50%
+  background: url("/src/images/skillSprite.png") no-repeat
+  -webkit-background-size: 400%
+  background-size: 400%
+  width: 100%
+  height: 100%
+
+  &__html
+    background-position: 0 0
+  &__css
+    background-position: -114px 0
+  &__less
+    background-position: -228px 0
+  &__sass
+    background-position: -342px 0
+  &__javas
+    background-position: 0 -114px
+  &__jquery
+    background-position: -114px -114px
+  &__bootstrap
+    background-position: -228px -114px
+  &__bem
+    background-position: -342px -114px
+  &__git
+    background-position: 0 -228px
+  &__gulp
+    background-position: -114px -228px
+  &__node
+    background-position: -228px -228px
+  &__photoshop
+    background-position: -342px -228px
+  &__premier
+    background-position: 0 -342px
+
+
+@media screen and (max-width: 767px)
+  .skills_header
+    font-size: 8em
+    text-align: center
+    left: 0
+
+  .skills_item
+    width: 90px
+    height: 90px
+
+  .skills_img
+    -webkit-background-size: 400%
+    background-size: 400%
+
+    &__html
+      background-position: 0 0
+    &__css
+      background-position: -84px 0
+    &__less
+      background-position: -168px 0
+    &__sass
+      background-position: -252px 0
+    &__javas
+      background-position: 0 -84px
+    &__jquery
+      background-position: -84px -84px
+    &__bootstrap
+      background-position: -168px -84px
+    &__bem
+      background-position: -252px -84px
+    &__git
+      background-position: 0 -168px
+    &__gulp
+      background-position: -84px -168px
+    &__node
+      background-position: -168px -168px
+    &__photoshop
+      background-position: -252px -168px
+    &__premier
+      background-position: 0 -252px
+
+
+@media screen and (min-width: 1200px)
+  .skills_header
+    left: 20%

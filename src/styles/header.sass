@@ -116,7 +116,7 @@ body
   width: 140px
   position: absolute
   top: 100px
-  left: 80px
+  left: 15%
   z-index: 500
   transition: all 0.5s ease
   opacity: 0
@@ -144,6 +144,8 @@ body
 
 
 .section1
+  padding: 0 15%
+  //background: linear-gradient(to bottom, #211c10 0%,#443c32 100%)
   background: url("/src/images/headerbg.jpg") no-repeat center
   background-size: cover
   width: 100%
@@ -190,6 +192,8 @@ body
   height: 1000px
 
 @media screen and (max-width: 767px)
+  .section1
+    padding: 0
   .logo
     height: 80px
     width: 100px
@@ -237,7 +241,7 @@ body
 
 
   .section_me
-    width: 100%
+    width: 100% !important
     overflow: hidden
     right: 0
     left: 0
@@ -263,11 +267,14 @@ body
 
 @media screen and (min-width: 768px) and (max-width: 1200px)
 
+  .section1
+    padding: 0
+
   .section_me
     height: 80%
     position: absolute
     bottom: 0
-    right: 3% !important
+    right: 10% !important
 
 
   .section_img
@@ -277,5 +284,6 @@ body
     right: 0
 
   .section1_title
-    padding-left: 3%
+    min-width: 370px
+    padding-left: 12%
     font-size: 1.7em

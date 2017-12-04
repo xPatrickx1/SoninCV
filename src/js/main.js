@@ -35,4 +35,12 @@ $(document).ready(function() {
     });
 
 
+    $('#fullpage').fullpage({
+        navigation: true,
+        slidesNavigation: false,
+        anchors:['section1', 'section2', 'section3'],
+        menu: '.nav ul'
+    });
+
+
 });
