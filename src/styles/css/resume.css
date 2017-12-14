@@ -1,0 +1,40 @@
+.section3 {
+  background: #151515;
+  color: #c3c3c3; }
+
+.resume_wrapper {
+  margin: 0 auto;
+  width: 70%; }
+
+.resume_block {
+  margin-bottom: 40px; }
+
+.resume_main {
+  font-size: 2em;
+  margin-top: 0; }
+
+.resume_bd {
+  margin-bottom: 80px; }
+
+.resume_organisation {
+  padding-left: 10px;
+  letter-spacing: 2px; }
+
+.resume_item {
+  font-size: 1.3em; }
+
+.resume_text {
+  font-size: 1.3em;
+  line-height: 1.3em;
+  margin-bottom: 20px; }
+
+.resume_botton {
+  margin: 0 auto;
+  width: 340px;
+  height: 170px;
+  border: 2px solid #c3c3c3; }
+
+.resume_link {
+  color: #c3c3c3;
+  padding-top: 50px;
+  cursor: pointer; }

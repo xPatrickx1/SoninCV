@@ -4,6 +4,16 @@
   to {
     width: 7em; } }
 
+@keyframes movFromBottom {
+  0% {
+    bottom: -1000px;
+    opacity: 1; }
+  70% {
+    bottom: 0; }
+  100% {
+    bottom: -50px;
+    opacity: 1; } }
+
 @keyframes blinkTextCursor {
   from {
     border-right-color: rgba(255, 255, 255, 0.75); }
