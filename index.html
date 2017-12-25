@@ -10,7 +10,8 @@
     <link href="/lib/bootstrap.css" rel="stylesheet">
     <link href="/lib/jquery.fullPage.css" rel="stylesheet">
     <script type="text/javascript" src="lib/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="lib/jquery.fullPage.js"></script>
+    <!--script(type="text/javascript" src="lib/jquery.fullPage.js")-->
+    <script type="text/javascript" src="lib/jquery.fullpage.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script type="text/javascript" src="src/js/main.js"></script>
   </head>
@@ -20,26 +21,27 @@
         <p class="line-1 anim-typewriter">made by sonin</p>
       </div>
     </div>
+    <nav class="navbar navbar-default col-sm-offset-5 col-md-offset-5">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed hamburger-menu" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <div class="bar"></div>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar_list" id="menu">
+            <li class="navbar_item" data-menuanchor="secondPage"><a class="navbar_link" href="#secondPage">skills</a></li>
+            <li class="navbar_item" data-menuanchor="3rdPage"><a class="navbar_link" href="#3rdPage">biography</a></li>
+            <li class="navbar_item" data-menuanchor="4thPage"><a class="navbar_link" href="#4thPage">works</a></li>
+            <li class="navbar_item" data-menuanchor="5thPage"><a class="navbar_link" href="#5thPage">contacts</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <div id="fullpage">
-      <div class="section section1 active">
-        <header><a class="logo animation" href="index.html"><span class="logo_img"></span></a>
-          <nav class="navbar navbar-default col-sm-offset-5 col-md-offset-5">
-            <div class="container-fluid">
-              <div class="navbar-header">
-                <button class="navbar-toggle collapsed hamburger-menu" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                  <div class="bar"></div>
-                </button>
-              </div>
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar_list">
-                  <li class="navbar_item"><a class="navbar_link" href="#">skills</a><span class="col1"></span></li>
-                  <li class="navbar_item"><a class="navbar_link" href="#">biography</a></li>
-                  <li class="navbar_item"><a class="navbar_link" href="#">works<span class="sr-only"></span></a></li>
-                  <li class="navbar_item"><a class="navbar_link" href="#">contacts</a></li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+      <div class="section section1 active" id="section1">
+        <header>
+          <div class="logo_wrapper"><span class="arrow_left"></span><span class="arrow_one"></span><a class="logo animation" href="index.html"><span class="logo_img"></span></a></div>
         </header>
         <div class="section_me"><img class="section_img" src="src/images/me.png"></div>
         <div class="section1_title">
@@ -47,7 +49,7 @@
           <p></p>Hi, my name is Evgeniy Sonin. <br>I am front-end developer, <br>kitesurfer and snouborder.
         </div>
       </div>
-      <div class="section section2 container">
+      <div class="section section2" id="section2">
         <h1 class="skills_header col-xl-offset-3">skills</h1>
         <ul class="skills_list">
           <li class="skills_item mov">
@@ -91,9 +93,8 @@
           </li>
         </ul>
       </div>
-      <div class="section section3">
+      <div class="section section3" id="section3">
         <div class="resume_wrapper">
-          <h1 class="resume_main resume_bd"> Date of birth:  1 January 1989</h1>
           <div class="row">
             <div class="col col-md-4">
               <h1 class="resume_main resume_work">Work Experience</h1>
@@ -131,24 +132,30 @@
             </div>
           </div>
           <div class="row">
-            <div class="col resume_botton"><a class="resume_link">download resume</a></div>
+            <div class="col resume_botton"><a class="resume_link" href="/src/Resume Sonin.Ievgen.pdf">download resume</a></div>
           </div>
         </div>
       </div>
-      <div class="section section4">
+      <div class="section section4" id="section4">
         <h1 class="works_header col-xl-offset-3">works</h1>
+        <div class="row">
+          <ul class="works_list">
+            <li class="works_item"><a class="works_link col" href="#"><img class="works_img" src="/src/images/siteAO.jpg"></a></li>
+            <li class="works_item"><a class="works_link col" href="#"><img class="works_img" src="/src/images/sitevideopro.jpg"></a></li>
+          </ul>
+        </div>
       </div>
-      <div class="section section5">
+      <div class="section section5" id="section5">
         <div class="mailtous">
           <form class="mailtous__form" data-toggle="validator" role="form"><span class="mailtous__name">keep in touch</span>
             <div class="form-group">
-              <input class="form-control" id="inputEmail" type="email" placeholder="" data-error="Bruh, that email address is invalid" required="">
-              <label class="control-label" for="inputEmail">email</label><span class="outline_form mov"></span>
+              <label class="control-label" for="inputEmail">email</label>
+              <input class="form-control" id="inputEmail" type="email" placeholder="" data-error="Bruh, that email address is invalid" required=""><span class="outline_form mov"></span>
               <div class="help-block with-errors"></div>
             </div>
             <div class="form-group form-message">
-              <textarea class="form-control" id="inputMessage" type="message" rows="1" data-minlength="6" placeholder="" required=""></textarea>
-              <label class="control-label control-label__message" for="inputMessage">message</label><span class="outline_form mov"></span>
+              <label class="control-label control-label__message" for="inputMessage">message</label>
+              <textarea class="form-control" id="inputMessage" type="message" rows="1" data-minlength="6" placeholder="" required=""></textarea><span class="outline_form mov"></span>
               <div class="help-block with-errors"></div>
             </div>
             <div class="form-group form-botton">

@@ -13,7 +13,8 @@ html(lang='en')
     link(href='/lib/jquery.fullPage.css', rel='stylesheet')
 
     script(type="text/javascript" src="lib/jquery-3.2.1.min.js")
-    script(type="text/javascript" src="lib/jquery.fullPage.js")
+    //script(type="text/javascript" src="lib/jquery.fullPage.js")
+    script(type="text/javascript" src="lib/jquery.fullpage.min.js")
 
 
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
@@ -25,33 +26,36 @@ html(lang='en')
       .loader
         p.line-1.anim-typewriter made by sonin
 
+    nav.navbar.navbar-default.col-sm-offset-5.col-md-offset-5
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle.collapsed.hamburger-menu(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+            .bar
 
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar_list#menu
+            li.navbar_item(data-menuanchor='secondPage')
+              a.navbar_link(href='#secondPage') skills
+            li.navbar_item(data-menuanchor='3rdPage')
+              a.navbar_link(href='#3rdPage') biography
+            li.navbar_item(data-menuanchor='4thPage')
+              a.navbar_link(href='#4thPage') works
+            li.navbar_item(data-menuanchor='5thPage')
+              a.navbar_link(href='#5thPage') contacts
 
 
     #fullpage
-      .section.section1.active
+
+      .section.section1.active#section1
         header
-          a.logo.animation(href='index.html')
-            span.logo_img
+          .logo_wrapper
+            span.arrow_left
 
-          nav.navbar.navbar-default.col-sm-offset-5.col-md-offset-5
-            .container-fluid
-              .navbar-header
-                button.navbar-toggle.collapsed.hamburger-menu(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
-                  .bar
+            span.arrow_one
+            a.logo.animation(href='index.html')
+              span.logo_img
 
-              #bs-example-navbar-collapse-1.collapse.navbar-collapse
-                ul.nav.navbar-nav.navbar_list
-                  li.navbar_item
-                    a.navbar_link(href='#') skills
-                    span.col1
-                  li.navbar_item
-                    a.navbar_link(href='#') biography
-                  li.navbar_item
-                    a.navbar_link(href='#') works
-                      span.sr-only
-                  li.navbar_item
-                    a.navbar_link(href='#') contacts
+
 
         .section_me
           img.section_img(src='src/images/me.png')
@@ -67,7 +71,7 @@ html(lang='en')
           | kitesurfer and snouborder.
 
 
-      .section.section2.container
+      .section.section2#section2
         h1.skills_header.col-xl-offset-3 skills
         ul.skills_list
           li.skills_item.mov
@@ -98,9 +102,8 @@ html(lang='en')
             .skills_img.skills_img__premier
 
 
-      .section.section3
+      .section.section3#section3
         .resume_wrapper
-          h1.resume_main.resume_bd  Date of birth:  1 January 1989
           .row
             .col.col-md-4
               h1.resume_main.resume_work Work Experience
@@ -147,29 +150,44 @@ html(lang='en')
 
           .row
             .col.resume_botton
-              a.resume_link download resume
+              a.resume_link(href='/src/Resume Sonin.Ievgen.pdf') download resume
 
 
 
 
 
-      .section.section4
+      .section.section4#section4
+
         h1.works_header.col-xl-offset-3 works
 
+        .row
+          ul.works_list
+            li.works_item
+              a.works_link.col(href='#')
+                img.works_img(src='/src/images/siteAO.jpg')
+            li.works_item
+              a.works_link.col(href='#')
+                img.works_img(src='/src/images/sitevideopro.jpg')
 
-      .section.section5
+
+
+
+
+
+
+      .section.section5#section5
         .mailtous
 
           form.mailtous__form(data-toggle='validator', role='form')
             span.mailtous__name keep in touch
             .form-group
-              input#inputEmail.form-control(type='email', placeholder='', data-error='Bruh, that email address is invalid', required='')
               label.control-label(for='inputEmail') email
+              input#inputEmail.form-control(type='email', placeholder='', data-error='Bruh, that email address is invalid', required='')
               span.outline_form.mov
               .help-block.with-errors
             .form-group.form-message
-              textarea#inputMessage.form-control(type='message', rows="1", data-minlength='6', placeholder='', required='')
               label.control-label.control-label__message(for='inputMessage') message
+              textarea#inputMessage.form-control(type='message', rows="1", data-minlength='6', placeholder='', required='')
               span.outline_form.mov
               .help-block.with-errors
 

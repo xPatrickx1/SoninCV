@@ -6,7 +6,66 @@
   font-size: 5em;
   position: relative;
   color: #c3c3c3;
-  left: 10%;
   text-transform: inherit;
   font-weight: 600;
-  margin-top: 0; }
+  top: 10px;
+  left: 25%;
+  margin: 0; }
+
+.works_list {
+  width: 70%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center; }
+
+.works_item {
+  display: inline-block;
+  width: 35%;
+  height: 100%;
+  margin: 0 4%; }
+
+.works_link {
+  width: 100%;
+  height: 100%; }
+  .works_link:hover .works_img {
+    width: 110%; }
+
+.works_img {
+  width: 100%;
+  height: 100%; }
+
+@media screen and (max-width: 767px) {
+  .works_header {
+    font-size: 3.5em;
+    margin: 0 auto;
+    text-align: center; }
+  .works_list {
+    width: 70%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center; }
+  .works_item {
+    display: block;
+    width: 300px;
+    height: 300px;
+    margin: 50px auto;
+    overflow: hidden; }
+  .works_img {
+    width: 300px;
+    height: 550px; }
+  .works_link {
+    width: 100%;
+    height: 100%; }
+    .works_link:hover .works_img {
+      width: 330px;
+      height: 580px; }
+  .works_item:hover {
+    width: 330px;
+    height: 330px; } }
+
+@media screen and (min-width: 1200px) {
+  .works_item {
+    display: inline-block;
+    width: 25%;
+    height: 100%;
+    margin: 0 4%; } }

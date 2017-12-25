@@ -36,11 +36,14 @@ $(document).ready(function() {
 
 
     $('#fullpage').fullpage({
+        menu: '#menu',
+        anchors:['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage'],
         navigation: true,
-        slidesNavigation: false,
-        anchors:['section1', 'section2', 'section3'],
-        menu: '.nav ul'
+        fixedElements: '#header, .footer',
+
     });
+
+
 
 
 });

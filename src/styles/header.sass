@@ -105,23 +105,49 @@ body
 
 
 
+.logo_wrapper
+  position: absolute
+  top: 100px
+  left: 15%
+
+.arrow_left
+  position: absolute
+  animation: setArrowPos .6s ease forwards
+  animation-delay: 1.5s
+  opacity: 1
 
 
+  &:before
+    content: ''
+    background: linear-gradient(to right, transparent, #c3c3c3)
+    position: absolute
+    background-repeat: no-repeat
+    animation: setGrad .8s ease forwards
+    -webkit-animation-timing-function: 
+    -moz-animation-timing-function: 
+    -o-animation-timing-function: 
+    animation-timing-function: 
+    animation-delay: 2s
+    width: 50%
+    height: 2px
+    border-radius: 2px
+    top: 55px
+    //left: 0
 
-
-
+.arrow_one
+  width: 50px
+  height: 2px
+  background: red
 
 .logo
   height: 110px
   width: 140px
   position: absolute
-  top: 100px
-  left: 15%
   z-index: 500
   transition: all 0.5s ease
   opacity: 0
   animation: flipInX .6s ease forwards
-  animation-delay: 1.5s
+  animation-delay: 2.5s
 
   .logo_img
     background: url("/src/images/logo.png") no-repeat center center
@@ -151,6 +177,7 @@ body
   width: 100%
   height: 100vh
   display: table
+  overflow: hidden
 
   .section_me
     height: 80%

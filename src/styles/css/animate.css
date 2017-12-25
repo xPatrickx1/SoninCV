@@ -72,3 +72,19 @@
       animation-delay: 0.3s; }
     .navbar-collapse.in .navbar_item:nth-child(4) {
       animation-delay: 0.4s; } }
+
+@keyframes setArrowPos {
+  from {
+    left: -300px;
+    opacity: 1; }
+  to {
+    left: -150px;
+    opacity: 1; } }
+
+@keyframes setGrad {
+  0% {
+    background-position: 0 0;
+    opacity: 1; }
+  100% {
+    background-position: 200px 0;
+    opacity: 1; } }
