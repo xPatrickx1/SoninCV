@@ -28,6 +28,14 @@
   to
     border-right-color: transparent
 
+@keyframes logoOpacity
+  0%
+    opacity: 0
+
+  100%
+    opacity: 1
+
+
 
 @keyframes flipInX
   0%
@@ -89,25 +97,85 @@
       &:nth-child(4)
         animation-delay: 0.4s
 
-@keyframes setArrowPos
-  from
-    left: -300px
-    opacity: 1
-
-  to
-    left: -150px
-    opacity: 1
-
-
-
-@keyframes setGrad
+@keyframes setArrowLeft
   0%
+    left: -100%
+    opacity: 1
+
+  50%
+    left: 50%
+    opacity: 1
+    background-position: 0 0
+
+  100%
+    background-position: 300px 0
+
+
+
+@keyframes setArrowTop
+  0%
+    bottom: 100%
+    opacity: 1
+
+  40%
+    bottom: 0
+    background-position: 0 0
+
+
+  70%
+    bottom: 0
+    background-position: 0 0
+
+  100%
+    background-position: 0 100%
+
+@keyframes setArrowPart
+  0%
+    background-position: 15px 0
+    opacity: 1
+
+  40%
+    background-position: 0 0
+
+  70%
     background-position: 0 0
     opacity: 1
 
   100%
-    background-position: 200px 0
+    background-position: 15px 0
+
+@keyframes lineWidth
+  0%
+    width: 0
+    margin-left: 0
+
+  60%
     opacity: 1
+
+  100%
+    width: 200%
+    margin-left: -100%
+    opacity: 0
+
+@keyframes lineHeight
+  0%
+    height: 0
+    margin-bottom: 0
+
+  40%
+    height: 200%
+    margin-bottom: -100%
+
+  70%
+    opacity: 1
+
+  100%
+    height: 200%
+    margin-bottom: -100%
+    opacity: 0
+
+
+
 
 
 

@@ -50,25 +50,53 @@ html(lang='en')
         header
           .logo_wrapper
             span.arrow_left
+              svg
+              span.arrow_left--part1
+              span.arrow_left--part2
 
-            span.arrow_one
-            a.logo.animation(href='index.html')
-              span.logo_img
+            span.arrow_top
+              span.arrow_top--part1
+              span.arrow_top--part2
+
+            .logo_case
+              span.line.line_left
+              span.line.line_top
+              span.line.line_bottom
+              span.line.line_right
+              a.logo.animation(href='index.html')
+                span.logo_img
 
 
 
-        .section_me
-          img.section_img(src='src/images/me.png')
-        .section1_title
-          h1 About me
-          p
-          | Hi, my name is Evgeniy Sonin.
-          =' '
-          br
-          | I am front-end developer,
-          =' '
-          br
-          | kitesurfer and snouborder.
+        .header_me
+          img.header_img(src='src/images/me.png')
+
+        .title_wrapper
+          span.arrow_left
+            svg
+            span.arrow_left--part1
+            span.arrow_left--part2
+
+          span.arrow_top
+            span.arrow_top--part1
+            span.arrow_top--part2
+
+          .header_case
+            span.line.line_left
+            span.line.line_top
+            span.line.line_bottom
+            span.line.line_right
+
+          .header_title
+            h1 About me
+            p
+            | Hi, my name is Evgeniy Sonin.
+            =' '
+            br
+            | I am front-end developer,
+            =' '
+            br
+            | kitesurfer and snouborder.
 
 
       .section.section2#section2
