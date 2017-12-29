@@ -26,7 +26,7 @@ html(lang='en')
       .loader
         p.line-1.anim-typewriter made by sonin
 
-    nav.navbar.navbar-default.col-sm-offset-5.col-md-offset-5
+    //nav.navbar.navbar-default.col-sm-offset-5.col-md-offset-5
       .container-fluid
         .navbar-header
           button.navbar-toggle.collapsed.hamburger-menu(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
@@ -47,6 +47,38 @@ html(lang='en')
     #fullpage
 
       .section.section1.active#section1
+
+        .menu_wrapper
+          span.arrow_right.arrow_menu
+            svg
+            span.arrow_left--part1
+            span.arrow_left--part2
+
+          span.arrow_top
+            span.arrow_bottom--part1
+            span.arrow_bottom--part2
+
+          .menu_case
+            span.line.line_left
+            span.line.line_top
+            span.line.line_bottom
+            span.line.line_right
+
+          nav.navbar.navbar-default
+              .navbar-header
+                button.navbar-toggle.collapsed.hamburger-menu(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+                  .bar
+
+              #bs-example-navbar-collapse-1.collapse.navbar-collapse
+                ul.nav.navbar-nav.navbar_list
+                  li.navbar_item
+                    a.navbar_link(href='#secondPage') skills
+                  li.navbar_item
+                    a.navbar_link(href='#3rdPage') biography
+                  li.navbar_item
+                    a.navbar_link(href='#4thPage') works
+                  li.navbar_item
+                    a.navbar_link(href='#5thPage') contacts
         header
           .logo_wrapper
             span.arrow_left
@@ -72,14 +104,14 @@ html(lang='en')
           img.header_img(src='src/images/me.png')
 
         .title_wrapper
-          span.arrow_left
+          span.arrow_left.arrow_title
             svg
             span.arrow_left--part1
             span.arrow_left--part2
 
-          span.arrow_top
-            span.arrow_top--part1
-            span.arrow_top--part2
+          span.arrow_bottom
+            span.arrow_bottom--part1
+            span.arrow_bottom--part2
 
           .header_case
             span.line.line_left

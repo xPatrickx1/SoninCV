@@ -21,25 +21,46 @@
         <p class="line-1 anim-typewriter">made by sonin</p>
       </div>
     </div>
-    <nav class="navbar navbar-default col-sm-offset-5 col-md-offset-5">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button class="navbar-toggle collapsed hamburger-menu" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <div class="bar"></div>
-          </button>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar_list" id="menu">
-            <li class="navbar_item" data-menuanchor="secondPage"><a class="navbar_link" href="#secondPage">skills</a></li>
-            <li class="navbar_item" data-menuanchor="3rdPage"><a class="navbar_link" href="#3rdPage">biography</a></li>
-            <li class="navbar_item" data-menuanchor="4thPage"><a class="navbar_link" href="#4thPage">works</a></li>
-            <li class="navbar_item" data-menuanchor="5thPage"><a class="navbar_link" href="#5thPage">contacts</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <!--nav.navbar.navbar-default.col-sm-offset-5.col-md-offset-5
+    .container-fluid
+      .navbar-header
+        button.navbar-toggle.collapsed.hamburger-menu(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+          .bar
+    
+      #bs-example-navbar-collapse-1.collapse.navbar-collapse
+        ul.nav.navbar-nav.navbar_list#menu
+          li.navbar_item(data-menuanchor='secondPage')
+            a.navbar_link(href='#secondPage') skills
+          li.navbar_item(data-menuanchor='3rdPage')
+            a.navbar_link(href='#3rdPage') biography
+          li.navbar_item(data-menuanchor='4thPage')
+            a.navbar_link(href='#4thPage') works
+          li.navbar_item(data-menuanchor='5thPage')
+            a.navbar_link(href='#5thPage') contacts
+    
+    
+    -->
     <div id="fullpage">
       <div class="section section1 active" id="section1">
+        <div class="menu_wrapper"><span class="arrow_right arrow_menu">
+            <svg></svg><span class="arrow_left--part1"></span><span class="arrow_left--part2"></span></span><span class="arrow_top"><span class="arrow_bottom--part1"></span><span class="arrow_bottom--part2"></span></span>
+          <div class="menu_case"><span class="line line_left"></span><span class="line line_top"></span><span class="line line_bottom"></span><span class="line line_right"></span></div>
+          <nav class="navbar navbar-default">
+            <div class="navbar-header">
+              <button class="navbar-toggle collapsed hamburger-menu" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <div class="bar"></div>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar_list">
+                <li class="navbar_item"><a class="navbar_link" href="#secondPage">skills</a></li>
+                <li class="navbar_item"><a class="navbar_link" href="#3rdPage">biography</a></li>
+                <li class="navbar_item"><a class="navbar_link" href="#4thPage">works</a></li>
+                <li class="navbar_item"><a class="navbar_link" href="#5thPage">contacts</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
         <header>
           <div class="logo_wrapper"><span class="arrow_left">
               <svg></svg><span class="arrow_left--part1"></span><span class="arrow_left--part2"></span></span><span class="arrow_top"><span class="arrow_top--part1"></span><span class="arrow_top--part2"></span></span>
@@ -47,8 +68,8 @@
           </div>
         </header>
         <div class="header_me"><img class="header_img" src="src/images/me.png"></div>
-        <div class="title_wrapper"><span class="arrow_left">
-            <svg></svg><span class="arrow_left--part1"></span><span class="arrow_left--part2"></span></span><span class="arrow_top"><span class="arrow_top--part1"></span><span class="arrow_top--part2"></span></span>
+        <div class="title_wrapper"><span class="arrow_left arrow_title">
+            <svg></svg><span class="arrow_left--part1"></span><span class="arrow_left--part2"></span></span><span class="arrow_bottom"><span class="arrow_bottom--part1"></span><span class="arrow_bottom--part2"></span></span>
           <div class="header_case"><span class="line line_left"></span><span class="line line_top"></span><span class="line line_bottom"></span><span class="line line_right"></span></div>
           <div class="header_title">
             <h1>About me</h1>
