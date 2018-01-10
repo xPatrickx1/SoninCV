@@ -42,43 +42,51 @@
     -->
     <div id="fullpage">
       <div class="section section1 active" id="section1">
-        <div class="menu_wrapper"><span class="arrow_right arrow_menu">
-            <svg></svg><span class="arrow_left--part1"></span><span class="arrow_left--part2"></span></span><span class="arrow_top"><span class="arrow_bottom--part1"></span><span class="arrow_bottom--part2"></span></span>
-          <div class="menu_case"><span class="line line_left"></span><span class="line line_top"></span><span class="line line_bottom"></span><span class="line line_right"></span></div>
-          <nav class="navbar navbar-default">
-            <div class="navbar-header">
-              <button class="navbar-toggle collapsed hamburger-menu" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <div class="bar"></div>
-              </button>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav navbar_list">
-                <li class="navbar_item"><a class="navbar_link" href="#secondPage">skills</a></li>
-                <li class="navbar_item"><a class="navbar_link" href="#3rdPage">biography</a></li>
-                <li class="navbar_item"><a class="navbar_link" href="#4thPage">works</a></li>
-                <li class="navbar_item"><a class="navbar_link" href="#5thPage">contacts</a></li>
-              </ul>
-            </div>
-          </nav>
-        </div>
         <header>
+          <div class="menu_wrapper mov"><span class="arrow_right arrow_menu">
+              <svg></svg><span class="arrow_right--part1"></span><span class="arrow_right--part2"></span></span><span class="arrow_top"><span class="arrow_top--part1"></span><span class="arrow_top--part2"></span></span>
+            <div class="menu_case"><span class="line line_left"></span><span class="line line_top"></span><span class="line line_bottom"></span><span class="line line_right"></span></div>
+            <nav class="navbar navbar-default">
+              <div class="navbar-header">
+                <button class="navbar-toggle collapsed hamburger-menu" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <div class="bar"></div>
+                </button>
+              </div>
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar_list">
+                  <li class="navbar_item"><a class="navbar_link" href="#secondPage">skills</a></li>
+                  <li class="navbar_item"><a class="navbar_link" href="#3rdPage">biography</a></li>
+                  <li class="navbar_item"><a class="navbar_link" href="#4thPage">works</a></li>
+                  <li class="navbar_item"><a class="navbar_link" href="#5thPage">contacts</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
           <div class="logo_wrapper"><span class="arrow_left">
               <svg></svg><span class="arrow_left--part1"></span><span class="arrow_left--part2"></span></span><span class="arrow_top"><span class="arrow_top--part1"></span><span class="arrow_top--part2"></span></span>
+            <!--.logo_case
+            span.line.line_horizontal
+            span.line.line_vertical
+            -->
             <div class="logo_case"><span class="line line_left"></span><span class="line line_top"></span><span class="line line_bottom"></span><span class="line line_right"></span><a class="logo animation" href="index.html"><span class="logo_img"></span></a></div>
           </div>
         </header>
         <div class="header_me"><img class="header_img" src="src/images/me.png"></div>
         <div class="title_wrapper"><span class="arrow_left arrow_title">
             <svg></svg><span class="arrow_left--part1"></span><span class="arrow_left--part2"></span></span><span class="arrow_bottom"><span class="arrow_bottom--part1"></span><span class="arrow_bottom--part2"></span></span>
-          <div class="header_case"><span class="line line_left"></span><span class="line line_top"></span><span class="line line_bottom"></span><span class="line line_right"></span></div>
-          <div class="header_title">
+          <div class="title_case"><span class="line line_top"></span><span class="line line_left"></span><span class="line line_bottom"></span><span class="line line_right"></span></div>
+          <div class="title">
             <h1>About me</h1>
             <p></p>Hi, my name is Evgeniy Sonin. <br>I am front-end developer, <br>kitesurfer and snouborder.
           </div>
         </div>
       </div>
       <div class="section section2" id="section2">
-        <h1 class="skills_header col-xl-offset-3">skills</h1>
+        <div class="skills_wrapper"><span class="arrow_left is-animated">
+            <svg></svg><span class="arrow_left--part1 mov"></span><span class="arrow_left--part2 mov"></span></span><span class="arrow_top mov"><span class="arrow_top--part1"></span><span class="arrow_top--part2"></span></span>
+          <div class="skills_case"><span class="line line_top"></span><span class="line line_left"></span><span class="line line_bottom"></span><span class="line line_right"></span></div>
+          <h1 class="skills">skills</h1>
+        </div>
         <ul class="skills_list">
           <li class="skills_item mov">
             <div class="skills_img skills_img__html"></div>
@@ -175,7 +183,7 @@
       </div>
       <div class="section section5" id="section5">
         <div class="mailtous">
-          <form class="mailtous__form" data-toggle="validator" role="form"><span class="mailtous__name">keep in touch</span>
+          <form class="mailtous__form" data-toggle="validator" role="form"><span class="mailtous__name">let`s talk!</span>
             <div class="form-group">
               <label class="control-label" for="inputEmail">email</label>
               <input class="form-control" id="inputEmail" type="email" placeholder="" data-error="Bruh, that email address is invalid" required=""><span class="outline_form mov"></span>
