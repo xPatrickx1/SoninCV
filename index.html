@@ -16,11 +16,11 @@
     <script type="text/javascript" src="src/js/main.js"></script>
   </head>
   <body>
-    <div class="loader_box">
-      <div class="loader">
-        <p class="line-1 anim-typewriter">made by sonin</p>
-      </div>
-    </div>
+    <!--.loader_box
+    .loader
+      p.line-1.anim-typewriter made by sonin
+    
+    -->
     <!--nav.navbar.navbar-default.col-sm-offset-5.col-md-offset-5
     .container-fluid
       .navbar-header
@@ -43,7 +43,7 @@
     <div id="fullpage">
       <div class="section section1 active" id="section1">
         <header>
-          <div class="menu_wrapper mov"><span class="arrow_right arrow_menu">
+          <div class="menu_wrapper"><span class="arrow_right arrow_menu">
               <svg></svg><span class="arrow_right--part1"></span><span class="arrow_right--part2"></span></span><span class="arrow_top"><span class="arrow_top--part1"></span><span class="arrow_top--part2"></span></span>
             <div class="menu_case"><span class="line line_left"></span><span class="line line_top"></span><span class="line line_bottom"></span><span class="line line_right"></span></div>
             <nav class="navbar navbar-default">
@@ -54,7 +54,9 @@
               </div>
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar_list">
-                  <li class="navbar_item"><a class="navbar_link" href="#secondPage">skills</a></li>
+                  <li class="navbar_item"><a class="navbar_link" href="#secondPage">skills
+                      <div class="hover_top"></div>
+                      <div class="hover_side"></div></a></li>
                   <li class="navbar_item"><a class="navbar_link" href="#3rdPage">biography</a></li>
                   <li class="navbar_item"><a class="navbar_link" href="#4thPage">works</a></li>
                   <li class="navbar_item"><a class="navbar_link" href="#5thPage">contacts</a></li>
@@ -82,60 +84,95 @@
         </div>
       </div>
       <div class="section section2" id="section2">
-        <div class="skills_wrapper"><span class="arrow_left is-animated">
-            <svg></svg><span class="arrow_left--part1 mov"></span><span class="arrow_left--part2 mov"></span></span><span class="arrow_top mov"><span class="arrow_top--part1"></span><span class="arrow_top--part2"></span></span>
+        <div class="skills_wrapper"><span class="arrow_left">
+            <svg></svg><span class="arrow_left--part1"></span><span class="arrow_left--part2"></span></span><span class="arrow_top mov"><span class="arrow_top--part1"></span><span class="arrow_top--part2"></span></span>
           <div class="skills_case"><span class="line line_top"></span><span class="line line_left"></span><span class="line line_bottom"></span><span class="line line_right"></span></div>
           <h1 class="skills">skills</h1>
         </div>
+        <div class="level_wrapper"><span class="arrow_left">
+            <svg></svg><span class="arrow_left--part1 mov"></span><span class="arrow_left--part2 mov"></span></span><span class="arrow_bottom"><span class="arrow_bottom--part1"></span><span class="arrow_bottom--part2"></span></span>
+          <div class="level_case"><span class="line line_top"></span><span class="line line_left"></span><span class="line line_bottom"></span><span class="line line_right"></span></div>
+          <div class="level">
+            <svg class="triangle" fill="url(#linear-gradient)" viewBox="0 0 100 500">
+              <defs>
+                <lineargradient id="MyGradient" gradienttransform="rotate(90)">
+                  <stop offset="0%" stop-color="green"></stop>
+                  <stop offset="50%" stop-color="orange"></stop>
+                  <stop offset="95%" stop-color="red"></stop>
+                </lineargradient>
+              </defs>
+              <path class="triline" fill="url(#MyGradient)" stroke="#c3c3c3" stroke-width="3" d="M10 10 L10 500 L90 10 Z"></path>
+              <animatetransform attributename="transform" attributetype="XML" type="scale" from="3" to="2" begin="`s" dur="3s" repeatcount="indefinite" additive="sum"></animatetransform>
+            </svg>
+          </div>
+        </div>
         <ul class="skills_list">
-          <li class="skills_item mov">
-            <div class="skills_img skills_img__html"></div>
-          </li>
-          <li class="skills_item">
-            <div class="skills_img skills_img__css"></div>
-          </li>
-          <li class="skills_item">
-            <div class="skills_img skills_img__less"></div>
-          </li>
-          <li class="skills_item">
-            <div class="skills_img skills_img__sass"></div>
-          </li>
-          <li class="skills_item">
-            <div class="skills_img skills_img__javas"></div>
-          </li>
-          <li class="skills_item">
-            <div class="skills_img skills_img__jquery"></div>
-          </li>
-          <li class="skills_item">
-            <div class="skills_img skills_img__bootstrap"></div>
-          </li>
-          <li class="skills_item">
-            <div class="skills_img skills_img__bem"></div>
-          </li>
-          <li class="skills_item">
-            <div class="skills_img skills_img__git"></div>
-          </li>
-          <li class="skills_item">
-            <div class="skills_img skills_img__gulp"></div>
-          </li>
-          <li class="skills_item">
-            <div class="skills_img skills_img__node"></div>
-          </li>
-          <li class="skills_item">
-            <div class="skills_img skills_img__photoshop"></div>
-          </li>
-          <li class="skills_item">
-            <div class="skills_img skills_img__premier"></div>
-          </li>
+          <div class="row">
+            <div class="col">
+              <li class="skills_item mov">
+                <div class="skills_img skills_img__html"></div>
+              </li>
+              <li class="skills_item">
+                <div class="skills_img skills_img__css"></div>
+              </li>
+              <li class="skills_item">
+                <div class="skills_img skills_img__less"></div>
+              </li>
+              <li class="skills_item">
+                <div class="skills_img skills_img__sass"></div>
+              </li>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <li class="skills_item">
+                <div class="skills_img skills_img__bootstrap"></div>
+              </li>
+              <li class="skills_item">
+                <div class="skills_img skills_img__bem"></div>
+              </li>
+              <li class="skills_item">
+                <div class="skills_img skills_img__photoshop"></div>
+              </li>
+              <li class="skills_item">
+                <div class="skills_img skills_img__premier"></div>
+              </li>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <li class="skills_item">
+                <div class="skills_img skills_img__git"></div>
+              </li>
+              <li class="skills_item">
+                <div class="skills_img skills_img__gulp"></div>
+              </li>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <li class="skills_item">
+                <div class="skills_img skills_img__javas"></div>
+              </li>
+              <li class="skills_item">
+                <div class="skills_img skills_img__jquery"></div>
+              </li>
+              <li class="skills_item">
+                <div class="skills_img skills_img__node"></div>
+              </li>
+            </div>
+          </div>
         </ul>
       </div>
       <div class="section section3" id="section3">
         <div class="resume_wrapper">
           <div class="row">
-            <div class="col col-md-4">
+            <div class="experience_wrapper"><span class="arrow_left">
+                <svg></svg><span class="arrow_left--part1"></span><span class="arrow_left--part2"></span></span><span class="arrow_top"><span class="arrow_top--part1"></span><span class="arrow_top--part2"></span></span>
+              <div class="experience_case"><span class="line line_left"></span><span class="line line_top"></span><span class="line line_bottom"></span><span class="line line_right"></span></div>
               <h1 class="resume_main resume_work">Work Experience</h1>
             </div>
-            <div class="col col-md-8 resume_block">
+            <div class="resume_block">
               <p class="resume_text">2013 – 2015   <strong class="resume_organisation">Kyivoblenergo</strong>
               </p>
               <p class="resume_text">Engineer 1 category.</p>

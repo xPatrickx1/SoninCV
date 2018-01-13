@@ -13,12 +13,12 @@ $(document).ready(function() {
     })();
 
 
-    $(window).on('load', function () {
+    /*$(window).on('load', function () {
         var $preloader = $('.loader_box'),
             $spinner   = $preloader.find('.line-1 .double-bounce2');
         $spinner.fadeOut();
         $preloader.delay(1500).fadeOut('slow');
-    });
+    });*/
 
 
     $(window).scroll(function() {

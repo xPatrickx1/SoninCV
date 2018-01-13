@@ -22,7 +22,7 @@ html(lang='en')
 
   body
 
-    .loader_box
+    //.loader_box
       .loader
         p.line-1.anim-typewriter made by sonin
 
@@ -49,7 +49,7 @@ html(lang='en')
       .section.section1.active#section1
 
         header
-          .menu_wrapper.mov
+          .menu_wrapper
             span.arrow_right.arrow_menu
               svg
               span.arrow_right--part1
@@ -74,6 +74,8 @@ html(lang='en')
                   ul.nav.navbar-nav.navbar_list
                     li.navbar_item
                       a.navbar_link(href='#secondPage') skills
+                        .hover_top
+                        .hover_side
                     li.navbar_item
                       a.navbar_link(href='#3rdPage') biography
                     li.navbar_item
@@ -141,10 +143,10 @@ html(lang='en')
       .section.section2#section2
 
         .skills_wrapper
-          span.arrow_left.is-animated
+          span.arrow_left
             svg
-            span.arrow_left--part1.mov
-            span.arrow_left--part2.mov
+            span.arrow_left--part1
+            span.arrow_left--part2
 
           span.arrow_top.mov
             span.arrow_top--part1
@@ -160,44 +162,95 @@ html(lang='en')
 
 
 
+        .level_wrapper
+          span.arrow_left
+            svg
+            span.arrow_left--part1.mov
+            span.arrow_left--part2.mov
+
+          span.arrow_bottom
+            span.arrow_bottom--part1
+            span.arrow_bottom--part2
+
+          .level_case
+            span.line.line_top
+            span.line.line_left
+            span.line.line_bottom
+            span.line.line_right
+
+          .level
+            svg.triangle(fill='url(#linear-gradient)' viewBox="0 0 100 500")
+              defs
+                lineargradient#MyGradient(gradienttransform='rotate(90)')
+                  stop(offset='0%', stop-color='green')
+                  stop(offset='50%', stop-color='orange')
+                  stop(offset='95%', stop-color='red')
+              path.triline(fill='url(#MyGradient)', stroke='#c3c3c3', stroke-width='3', d='M10 10 L10 500 L90 10 Z')
+              animatetransform(attributename='transform', attributetype='XML', type='scale', from='3', to='2', begin='`s', dur='3s', repeatcount='indefinite', additive='sum')
+
 
 
         ul.skills_list
-          li.skills_item.mov
-            .skills_img.skills_img__html
-          li.skills_item
-            .skills_img.skills_img__css
-          li.skills_item
-            .skills_img.skills_img__less
-          li.skills_item
-            .skills_img.skills_img__sass
-          li.skills_item
-            .skills_img.skills_img__javas
-          li.skills_item
-            .skills_img.skills_img__jquery
-          li.skills_item
-            .skills_img.skills_img__bootstrap
-          li.skills_item
-            .skills_img.skills_img__bem
-          li.skills_item
-            .skills_img.skills_img__git
-          li.skills_item
-            .skills_img.skills_img__gulp
-          li.skills_item
-            .skills_img.skills_img__node
-          li.skills_item
-            .skills_img.skills_img__photoshop
-          li.skills_item
-            .skills_img.skills_img__premier
+          .row
+            .col
+              li.skills_item.mov
+                .skills_img.skills_img__html
+              li.skills_item
+                .skills_img.skills_img__css
+              li.skills_item
+                .skills_img.skills_img__less
+              li.skills_item
+                .skills_img.skills_img__sass
+          .row
+            .col
+              li.skills_item
+                .skills_img.skills_img__bootstrap
+              li.skills_item
+                .skills_img.skills_img__bem
+              li.skills_item
+                .skills_img.skills_img__photoshop
+              li.skills_item
+                .skills_img.skills_img__premier
+          .row
+            .col
+              li.skills_item
+                .skills_img.skills_img__git
+              li.skills_item
+                .skills_img.skills_img__gulp
+          .row
+            .col
+              li.skills_item
+                .skills_img.skills_img__javas
+              li.skills_item
+                .skills_img.skills_img__jquery
+              li.skills_item
+                .skills_img.skills_img__node
+
+
 
 
       .section.section3#section3
         .resume_wrapper
           .row
-            .col.col-md-4
+            .experience_wrapper
+              span.arrow_left
+                svg
+                span.arrow_left--part1
+                span.arrow_left--part2
+
+              span.arrow_top
+                span.arrow_top--part1
+                span.arrow_top--part2
+
+              .experience_case
+                span.line.line_left
+                span.line.line_top
+                span.line.line_bottom
+                span.line.line_right
+
               h1.resume_main.resume_work Work Experience
 
-            .col.col-md-8.resume_block
+            .resume_block
               p.resume_text 2013 – 2015
                 ='   '
                 strong.resume_organisation Kyivoblenergo

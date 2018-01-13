@@ -11,7 +11,13 @@
 
 .resume_main {
   font-size: 2em;
-  margin-top: 0; }
+  margin-top: 0;
+  width: 230px;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 5px; }
 
 .resume_bd {
   margin-bottom: 80px; }
@@ -46,3 +52,25 @@
     background: #c3c3c3;
     color: #000;
     text-decoration: none; }
+
+.experience_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35%;
+  height: 140px; }
+
+.experience_case {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 240px;
+  height: 40px; }
+
+.experience .arrow_left {
+  width: calc(100% - 240px);
+  height: 40px; }
+
+.experience .arrow_top {
+  width: 230px;
+  height: calc(100% - 40px); }
