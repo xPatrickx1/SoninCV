@@ -22,7 +22,7 @@ html(lang='en')
 
   body
 
-    //.loader_box
+    .loader_box
       .loader
         p.line-1.anim-typewriter made by sonin
 
@@ -193,66 +193,85 @@ html(lang='en')
         ul.skills_list
           .row
             .col
-              li.skills_item.mov
+              li.skills_item.skills_item__html
                 .skills_img.skills_img__html
-              li.skills_item
+              li.skills_item.skills_item__css
                 .skills_img.skills_img__css
-              li.skills_item
+              li.skills_item.skills_item__less
                 .skills_img.skills_img__less
-              li.skills_item
+              li.skills_item.skills_item__sass
                 .skills_img.skills_img__sass
           .row
             .col
-              li.skills_item
+              li.skills_item.skills_item__bootstrap
                 .skills_img.skills_img__bootstrap
-              li.skills_item
+              li.skills_item.skills_item__bem
                 .skills_img.skills_img__bem
-              li.skills_item
+              li.skills_item.skills_item__photoshop
                 .skills_img.skills_img__photoshop
-              li.skills_item
+              li.skills_item.skills_item__illustrator
+                .skills_img.skills_img__illustrator
+              li.skills_item.skills_item__premier
                 .skills_img.skills_img__premier
           .row
             .col
-              li.skills_item
+              li.skills_item.skills_item__git
                 .skills_img.skills_img__git
-              li.skills_item
+              li.skills_item.skills_item__gulp
                 .skills_img.skills_img__gulp
           .row
             .col
-              li.skills_item
+              li.skills_item.skills_item__javas
                 .skills_img.skills_img__javas
-              li.skills_item
+              li.skills_item.skills_item__jquery
                 .skills_img.skills_img__jquery
-              li.skills_item
+              li.skills_item.skills_item__node
                 .skills_img.skills_img__node
 
 
 
 
-      .section.section3#section3
-        .resume_wrapper
-          .row
-            .experience_wrapper
-              span.arrow_left
-                svg
-                span.arrow_left--part1
-                span.arrow_left--part2
+      .section.section3#section3.mov
+        .some#mov
 
-              span.arrow_top
-                span.arrow_top--part1
-                span.arrow_top--part2
 
-              .experience_case
-                span.line.line_left
-                span.line.line_top
-                span.line.line_bottom
-                span.line.line_right
+        .experience_wrapper
+          span.arrow_left
+            svg
+            span.arrow_left--part1
+            span.arrow_left--part2
+          span.arrow_top
+            span.arrow_top--part1
+            span.arrow_top--part2
 
-              h1.resume_main.resume_work Work Experience
+          .experience_case.mov
+            span.line.line_left
+            span.line.line_top
+            span.line.line_bottom
+            span.line.line_right
 
-            .resume_block
-              p.resume_text 2013 – 2015
-                ='   '
+          h1.experience_text.resume_main.resume_work Work Experience
+
+
+        .experience1_wrapper
+          span.arrow_right
+            svg
+            span.arrow_right--part1
+            span.arrow_right--part2
+
+          span.arrow_top
+            span.arrow_top--part1
+            span.arrow_top--part2
+
+          .experience1_case
+            span.line.line_left
+            span.line.line_top
+            span.line.line_bottom
+            span.line.line_right
+
+          .experience1_block
+              p.resume_year 2013 – 2015
+                =' '
                 strong.resume_organisation Kyivoblenergo
 
               p.resume_text Engineer 1 category.
@@ -264,7 +283,19 @@ html(lang='en')
                 li.resume_item contractual work: agreement and conclusion of contracts, evaluation of the supplier's work in accordance with the concluded contracts;
                 li.resume_item analysis of the needs of the company, price planning;
 
-            .col.col-md-8.col-md-offset-4.resume_block
+        .experience2_wrapper
+          span.arrow_right
+            svg
+            span.arrow_right--part1
+            span.arrow_right--part2
+
+          .experience2_case
+            span.line.line_left.mov
+            span.line.line_top.mov
+            span.line.line_bottom.mov
+            span.line.line_right.mov
+
+          .experience2_block
 
               p.resume_text 2010 – 2012
                 ='   '
@@ -277,30 +308,78 @@ html(lang='en')
                 li.resume_item server infrastructure support;
                 li.resume_item computer maintenance;
 
-          .row
-            .col.col-md-4
-              h1.resume_main Education
-            .col.col-md-8
-              p.resume_text 2006 - 2011
-                strong  National Transport University
-                =' '
-                br
-                | Automechanical Faculty
-                =' '
-                br
-                | Specialty: Automobiles
 
-          .row
-            .col.resume_botton
-              a.resume_link(href='/src/Resume Sonin.Ievgen.pdf') download resume
+
+        .education_wrapper
+          span.arrow_left
+            svg
+            span.arrow_left--part1
+            span.arrow_left--part2
+
+          span.arrow_bottom
+            span.arrow_bottom--part1
+            span.arrow_bottom--part2
+
+          .education_case
+            span.line.line_left
+            span.line.line_top
+            span.line.line_bottom
+            span.line.line_right
+
+          h1.education_main Education
+
+
+        .university_wrapper
+          span.arrow_right
+            svg
+            span.arrow_right--part1
+            span.arrow_right--part2
+
+          span.arrow_bottom
+            span.arrow_bottom--part1
+            span.arrow_bottom--part2
+
+          .university_case
+            span.line.line_left
+            span.line.line_top
+            span.line.line_bottom
+            span.line.line_right
+
+          p.resume_text 2006 - 2011
+                  strong  National Transport University
+                  =' '
+                  br
+                  | Automechanical Faculty
+                  =' '
+                  br
+                  | Specialty: Automobiles
+
+        //.row
+          .col.resume_botton
+            a.resume_link(href='/src/Resume Sonin.Ievgen.pdf') download resume
 
 
 
 
 
       .section.section4#section4
+        .works_wrapper
+          span.arrow_left
+            svg
+            span.arrow_left--part1
+            span.arrow_left--part2
 
-        h1.works_header.col-xl-offset-3 works
+          span.arrow_top
+            span.arrow_top--part1
+            span.arrow_top--part2
+
+          .works_case
+            span.line.line_left
+            span.line.line_top
+            span.line.line_bottom
+            span.line.line_right
+
+          h1.works_header works
 
         .row
           ul.works_list

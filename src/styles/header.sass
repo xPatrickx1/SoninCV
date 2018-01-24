@@ -9,22 +9,176 @@ body
 
 .section1.active
 
+  .arrow
+    &_left
+
+      &:before
+        animation: setArrowLeft 1.2s ease forwards
+        animation-delay: 2s
+      &--part1
+        animation: setArrowPart .6s ease forwards
+        animation-delay: 2.3s
+      &--part2
+        animation: setArrowPart .6s ease forwards
+        animation-delay: 2.3s
+
+    &_top
+
+      &:before
+        animation: setArrowTop 1.2s ease forwards
+        animation-delay: 2s
+
+      &--part1
+        animation: setArrowPart .6s ease forwards
+        animation-delay: 2.3s
+
+      &--part2
+        animation: setArrowPart .6s ease forwards
+        animation-delay: 2.3s
+
+    &_right
+
+      &:before
+        animation: setArrowRight 1.2s ease forwards
+        animation-delay: 2s
+
+      &--part1
+        animation: setArrowPart .6s ease forwards
+        animation-delay: 2.3s
+
+      &--part2
+        animation: setArrowPart .6s ease forwards
+        animation-delay: 2.3s
+
+    &_bottom
+
+      &:before
+        animation: setArrowBottom 1.2s ease forwards
+        animation-delay: 2s
+
+      &--part1
+        animation: setArrowPart .6s ease forwards
+        animation-delay: 2.3s
+
+      &--part2
+        animation: setArrowPart .6s ease forwards
+        animation-delay: 2.3s
+
+  .line
+
+    &_left
+      animation: lineHeight 1.1s ease forwards
+      animation-delay: 2.3s
+
+    &_top
+      animation: lineWidth 1.1s ease forwards
+      animation-delay: 2.3s
+
+    &_right
+      animation: lineHeight 1.1s ease forwards
+      animation-delay: 2.3s
+
+    &_bottom
+      animation: lineWidth 1.1s ease forwards
+      animation-delay: 2.3s
+
+  .title_wrapper
+
+    .arrow
+      &_left
+
+        &:before
+          animation: setArrowLeft 1.2s ease forwards
+          animation-delay: 3s
+        &--part1
+          animation: setArrowPart .6s ease forwards
+          animation-delay: 3.3s
+        &--part2
+          animation: setArrowPart .6s ease forwards
+          animation-delay: 3.3s
+
+      &_top
+
+        &:before
+          animation: setArrowTop 1.2s ease forwards
+          animation-delay: 3s
+
+        &--part1
+          animation: setArrowPart .6s ease forwards
+          animation-delay: 3.3s
+
+        &--part2
+          animation: setArrowPart .6s ease forwards
+          animation-delay: 3.3s
+
+      &_right
+
+        &:before
+          animation: setArrowRight 1.2s ease forwards
+          animation-delay: 3s
+
+        &--part1
+          animation: setArrowPart .6s ease forwards
+          animation-delay: 3.3s
+
+        &--part2
+          animation: setArrowPart .6s ease forwards
+          animation-delay: 3.3s
+
+      &_bottom
+
+        &:before
+          animation: setArrowBottom 1.2s ease forwards
+          animation-delay: 3s
+
+        &--part1
+          animation: setArrowPart .6s ease forwards
+          animation-delay: 3.3s
+
+        &--part2
+          animation: setArrowPart .6s ease forwards
+          animation-delay: 3.3s
+
+    .line
+
+      &_left
+        animation: lineHeight 1.1s ease forwards
+        animation-delay: 3.3s
+
+      &_top
+        animation: lineWidth 1.1s ease forwards
+        animation-delay: 3.3s
+
+      &_right
+        animation: lineHeight 1.1s ease forwards
+        animation-delay: 3.3s
+
+      &_bottom
+        animation: lineWidth 1.1s ease forwards
+        animation-delay: 3.3s
+
+
+
+
+
+
+
   .logo
     animation: logoOpacity .6s ease forwards
-    animation-delay: 1s
+    animation-delay: 3s
 
   .navbar_link
     animation: logoOpacity .6s ease forwards
-    animation-delay: 1s
+    animation-delay: 3s
 
 
   .title
     animation: opaCity .6s ease forwards
-    animation-delay: 1s
+    animation-delay: 3.8s
 
   .header_me
     animation: movFromBottom 1.3s ease forwards
-    animation-delay: .8s
+    animation-delay: 3s
 
 
 .arrow
@@ -466,7 +620,8 @@ body
     right: 12%
     transition: all 1s ease
     overflow: hidden
-    width: 600px
+    width: 35%
+    min-width: 600px
     opacity: 0
 
 

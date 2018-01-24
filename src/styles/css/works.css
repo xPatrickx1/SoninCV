@@ -2,15 +2,33 @@
   background: #151515;
   color: #c3c3c3; }
 
+.works_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35%;
+  height: 140px; }
+  .works_wrapper .arrow_left {
+    width: calc(100% - 240px);
+    height: 40px; }
+  .works_wrapper .arrow_top {
+    width: 230px;
+    height: calc(100% - 40px); }
+  .works_wrapper .works_case {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 240px;
+    height: 40px; }
+
 .works_header {
   font-size: 5em;
-  position: relative;
   color: #c3c3c3;
   text-transform: inherit;
   font-weight: 600;
-  top: 10px;
-  left: 25%;
-  margin: 0; }
+  position: absolute;
+  bottom: 0;
+  right: 0; }
 
 .works_list {
   width: 70%;

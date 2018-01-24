@@ -3,9 +3,10 @@
 .section2
   background: #151515
 
-.section.active
+.section2.active
   .arrow
     &_left
+
       &:before
         animation: setArrowLeft 1.2s ease forwards
         animation-delay: 0s
@@ -80,31 +81,161 @@
 
   .level_wrapper
 
+    .arrow
+      &_left
+
+        &:before
+          animation: setArrowLeft 1.2s ease forwards
+          animation-delay: 1.6s
+        &--part1
+          animation: setArrowPart .6s ease forwards
+          animation-delay: 1.9s
+        &--part2
+          animation: setArrowPart .6s ease forwards
+          animation-delay: 1.9s
+
+      &_bottom
+
+        &:before
+          animation: setArrowBottom 1.2s ease forwards
+          animation-delay: 1.6s
+
+        &--part1
+          animation: setArrowPart .6s ease forwards
+          animation-delay: 1.9s
+
+        &--part2
+          animation: setArrowPart .6s ease forwards
+          animation-delay: 1.9s
+
+
+
     .level_case
 
-      .line_left
-        animation: lineHeightSmall 1.1s ease forwards
-        animation-delay: 2.3s
-      .line_right
-        animation: lineHeightSmall 1.1s ease forwards
-        animation-delay: 2.3s
+      .line
+
+        &_left
+          animation: lineHeight 1.1s ease forwards
+          animation-delay: 1.9s
+
+        &_top
+          animation: lineWidth 1.1s ease forwards
+          animation-delay: 1.9s
+
+        &_right
+          animation: lineHeight 1.1s ease forwards
+          animation-delay: 1.9s
+
+        &_bottom
+          animation: lineWidth 1.1s ease forwards
+          animation-delay: 1.9s
+
 
   .skills
     animation: logoOpacity .6s ease forwards
-    animation-delay: 3s
+    animation-delay: 1.9s
 
-.section2.active
+  .skills_wrapper
+    .arrow
+      &_left
+
+        &:before
+          animation: setArrowLeft 1.2s ease forwards
+          animation-delay: 1s
+        &--part1
+          animation: setArrowPart .6s ease forwards
+          animation-delay: 1.3s
+        &--part2
+          animation: setArrowPart .6s ease forwards
+          animation-delay: 1.3s
+
+      &_top
+
+        &:before
+          animation: setArrowTop 1.2s ease forwards
+          animation-delay: 1s
+
+        &--part1
+          animation: setArrowPart .6s ease forwards
+          animation-delay: 1.3s
+
+        &--part2
+          animation: setArrowPart .6s ease forwards
+          animation-delay: 1.3s
+
+  .skills_case
+    .line
+
+      &_left
+        animation: lineHeight 1.1s ease forwards
+        animation-delay: 1.6s
+
+      &_top
+        animation: lineWidth 1.1s ease forwards
+        animation-delay: 1.6s
+
+      &_right
+        animation: lineHeight 1.1s ease forwards
+        animation-delay: 1.6s
+
+      &_bottom
+        animation: lineWidth 1.1s ease forwards
+        animation-delay: 1.6s
+
+
   .triline
     animation: dash 1.5s linear forwards
-    animation-delay: 2.7s
+    animation-delay: 2.5s
 
   stop
-    animation: colors 4s ease
+    animation: colors 3.6s ease
     animation-delay: 0s
 
   .skills_item
     animation: flipInY 1s ease forwards
-    animation-delay: 2.4s
+    //animation-delay: 5.4s !important
+
+    &__html
+      animation-delay: 3.3s
+
+    &__css
+      animation-delay: 3.4s
+
+    &__less
+      animation-delay: 3.5s
+
+    &__sass
+      animation-delay: 3.6s
+
+    &__bootstrap
+      animation-delay: 3.3s
+
+    &__bem
+      animation-delay: 3.4s
+
+    &__photoshop
+      animation-delay: 3.5s
+
+    &__illustrator
+      animation-delay: 3.6s
+
+    &__premier
+      animation-delay: 3.7s
+
+    &__git
+      animation-delay: 3.3s
+
+    &__gulp
+      animation-delay: 3.3s
+
+    &__javas
+      animation-delay: 3.3s
+
+    &__jquery
+      animation-delay: 3.3s
+
+    &__node
+      animation-delay: 3.3s
 
 
 
@@ -155,7 +286,6 @@
   left: 0
   width: 32%
   height: 75%
-
   .arrow
 
     &_left
@@ -167,12 +297,12 @@
       height: calc(100% - 520px)
       width: 110px
 
-.level_case
-  position: absolute
-  top: 0
-  right: 0
-  width: 110px
-  height: 520px
+  .level_case
+    position: absolute
+    top: 0
+    right: 0
+    width: 110px
+    height: 520px
 
 .level
   position: absolute
@@ -193,7 +323,7 @@
 .skills_list
   padding: 0
   text-align: left
-  max-width: 500px
+  max-width: 540px
   margin: 100px 0 0 40%
 
 
@@ -206,14 +336,11 @@
   opacity: 0
 
 
-@for $i from 1 through 13
+//@for $i from 1 through 13
   .section2.active
+    .skills_item
     .skills_item:nth-child(#{$i})
-      -webkit-animation-delay: ($i * 0.1) + s
       animation-delay: ($i * 0.1) + s
-
-
-.section2.active
 
 
 .skills_img
@@ -251,6 +378,8 @@
     background-position: -168px -168px
   &__photoshop
     background-position: -252px -168px
+  &__illustrator
+    background-position: -84px -252px
   &__node
     background-position: 0 -252px
 
@@ -262,13 +391,17 @@
     width: 17%
     height: 68%
 
-    .arrow_left
-      width: calc(100% - 80px)
-      height: 400px
+    .arrow
+      &_left
+        width: calc(100% - 80px)
+        height: 400px
 
-  .level_case
-    width: 80px
-    height: 400px
+      &_bottom
+        height: calc(100% - 400px)
+
+    .level_case
+      width: 80px !important
+      height: 400px !important
 
   .triangle
     width: 80px
@@ -280,7 +413,7 @@
     left: 0
 
   .skills_list
-    min-width: 320px
+    min-width: 390px
     margin: 100px 30% 0
 
 
@@ -315,6 +448,8 @@
       background-position: -64px -128px
     &__premier
       background-position: -128px -128px
+    &__illustrator
+      background-position: -64px -192px
     &__photoshop
       background-position: -192px -128px
     &__node
@@ -322,5 +457,3 @@
 
 
 @media screen and (min-width: 1200px)
-  .skills
-    //left: 20%
