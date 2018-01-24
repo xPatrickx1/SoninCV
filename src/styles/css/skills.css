@@ -240,9 +240,7 @@
   .level_wrapper .level_case {
     position: absolute;
     top: 0;
-    right: 0;
-    width: 110px;
-    height: 520px; }
+    right: 0; }
 
 .level {
   position: absolute;
@@ -260,7 +258,7 @@
 .skills_list {
   padding: 0;
   text-align: left;
-  max-width: 540px;
+  width: 540px;
   margin: 100px 0 0 40%; }
 
 .skills_item {
@@ -317,9 +315,11 @@
     .level_wrapper .arrow_left {
       width: calc(100% - 80px);
       height: 400px; }
-  .level_case {
-    width: 80px;
-    height: 400px; }
+    .level_wrapper .arrow_bottom {
+      height: calc(100% - 400px); }
+    .level_wrapper .level_case {
+      width: 80px;
+      height: 400px; }
   .triangle {
     width: 80px;
     height: 400px; }
@@ -328,8 +328,9 @@
     text-align: center;
     left: 0; }
   .skills_list {
-    min-width: 320px;
-    margin: 100px 30% 0; }
+    width: 400px;
+    margin: 100px 8% 0 0;
+    float: right; }
   .skills_item {
     width: 70px;
     height: 70px;
@@ -365,3 +366,15 @@
       background-position: -192px -128px; }
     .skills_img__node {
       background-position: 0 -192px; } }
+
+@media screen and (min-width: 768px) {
+  .level_wrapper .level_case {
+    width: 110px;
+    height: 520px; } }
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .skills_list {
+    width: 540px;
+    margin: 100px 0 0 30%; }
+  .level_wrapper {
+    width: 22%; } }

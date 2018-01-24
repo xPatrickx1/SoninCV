@@ -231,8 +231,7 @@ html(lang='en')
 
 
 
-      .section.section3#section3.mov
-        .some#mov
+      .section.section3#section3
 
 
         .experience_wrapper
@@ -345,8 +344,8 @@ html(lang='en')
             span.line.line_bottom
             span.line.line_right
 
-          p.resume_text 2006 - 2011
-                  strong  National Transport University
+          p.university_text 2006 - 2011
+                  strong.university_name  National Transport University
                   =' '
                   br
                   | Automechanical Faculty
@@ -354,9 +353,28 @@ html(lang='en')
                   br
                   | Specialty: Automobiles
 
-        //.row
-          .col.resume_botton
-            a.resume_link(href='/src/Resume Sonin.Ievgen.pdf') download resume
+        .botton_wrapper
+
+          span.arrow_right
+            span.arrow_right--part1
+            span.arrow_right--part2
+
+          span.arrow_left
+            span.arrow_left--part1
+            span.arrow_left--part2
+
+          span.arrow_bottom
+            span.arrow_bottom--part1
+            span.arrow_bottom--part2
+
+          .botton_case
+            span.line.line_left
+            span.line.line_top
+            span.line.line_bottom
+            span.line.line_right
+
+          .botton
+              a.botton_link(href='/src/Resume Sonin.Ievgen.pdf') download resume
 
 
 
