@@ -399,14 +399,46 @@ html(lang='en')
 
           h1.works_header works
 
-        .row
-          ul.works_list
-            li.works_item
-              a.works_link.col(href='#')
-                img.works_img(src='/src/images/siteAO.jpg')
-            li.works_item
-              a.works_link.col(href='#')
-                img.works_img(src='/src/images/sitevideopro.jpg')
+        .work1_wrapper
+          span.arrow_left
+            svg
+            span.arrow_left--part1
+            span.arrow_left--part2
+
+          span.arrow_bottom
+            span.arrow_bottom--part1
+            span.arrow_bottom--part2
+
+          .work1_case
+            span.line.line_left
+            span.line.line_top
+            span.line.line_bottom
+            span.line.line_right
+
+          .work1_item
+            a.works_link.col(href='#')
+              img.works_img(src='/src/images/siteAO.jpg')
+
+
+        .work2_wrapper
+          span.arrow_right
+            svg
+            span.arrow_right--part1
+            span.arrow_right--part2
+
+          span.arrow_bottom
+            span.arrow_bottom--part1
+            span.arrow_bottom--part2
+
+          .work2_case
+            span.line.line_left
+            span.line.line_top
+            span.line.line_bottom
+            span.line.line_right
+
+          .work2_item
+            a.works_link.col(href='#')
+              img.works_img(src='/src/images/sitevideopro.jpg')
 
 
 
@@ -415,23 +447,65 @@ html(lang='en')
 
 
       .section.section5#section5
-        .mailtous
+        .formname_wrapper
+          span.arrow_left
+            span.arrow_left--part1
+            span.arrow_left--part2
 
-          form.mailtous__form(data-toggle='validator', role='form')
-            span.mailtous__name let`s talk!
-            .form-group
-              label.control-label(for='inputEmail') email
-              input#inputEmail.form-control(type='email', placeholder='', data-error='Bruh, that email address is invalid', required='')
-              span.outline_form.mov
-              .help-block.with-errors
-            .form-group.form-message
-              label.control-label.control-label__message(for='inputMessage') message
-              textarea#inputMessage.form-control(type='message', rows="1", data-minlength='6', placeholder='', required='')
-              span.outline_form.mov
-              .help-block.with-errors
+          span.arrow_top
+            span.arrow_top--part1
+            span.arrow_top--part2
 
-            .form-group.form-botton
-              button.btn.btn-default(type='submit') send
+          .formname_case
+            span.line.line_left
+            span.line.line_top
+            span.line.line_bottom
+            span.line.line_right
+
+          .formname_name let`s talk!
+
+
+        .mailtous_wrapper
+
+          span.arrow_left
+            span.arrow_left--part1
+            span.arrow_left--part2
+
+          span.arrow_right
+            span.arrow_right--part1
+            span.arrow_right--part2
+
+          span.arrow_top
+            span.arrow_top--part1
+            span.arrow_top--part2
+
+          .mailtous_case
+            span.line.line_left
+            span.line.line_top
+            span.line.line_bottom
+            span.line.line_right
+
+          .mailtous
+
+            form.mailtous__form(data-toggle='validator', role='form')
+              .form-group
+                label.control-label(for='inputEmail') email
+                input#inputEmail.form-control(type='email', placeholder='', data-error='Bruh, that email address is invalid', required='')
+                span.outline_form
+                .help-block.with-errors
+              .form-group.form-message
+                label.control-label.control-label__message(for='inputMessage') message
+                textarea#inputMessage.form-control(type='message', rows="1", data-minlength='6', placeholder='', required='')
+                span.outline_form
+                .help-block.with-errors
+
+              .form-group.form-botton
+                button.btn.btn-default(type='submit') send
+
+
+
+
+
 
 
 

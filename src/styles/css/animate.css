@@ -208,3 +208,13 @@
     stop-color: transparent; }
   90% {
     stop-color: transparent; } }
+
+@keyframes formWidth {
+  0% {
+    width: 0;
+    margin-left: 0; }
+  60% {
+    opacity: 1; }
+  100% {
+    width: 100%;
+    opacity: 1; } }

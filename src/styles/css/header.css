@@ -398,6 +398,7 @@ body {
 
 .navbar_link:hover:after, .navbar_link:hover:before {
   backface-visibility: hidden;
+  border-color: #c3c3c3;
   transition: width 350ms ease-in-out;
   width: 80%;
   height: 2px;
@@ -500,6 +501,7 @@ body {
 
 .logo .logo_img:hover {
   background: url("/src/images/logoSun.png") no-repeat center center;
+  background-size: 100%;
   transition: background 0.5s ease; }
 
 .section1 {
