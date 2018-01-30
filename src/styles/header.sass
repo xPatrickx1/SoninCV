@@ -1,11 +1,22 @@
 body
   font-family: sans-serif
   transition: all 3s ease
+  margin: 0
+  font-size: 0.9em
+
 *
   box-sizing: inherit
   transition-property: all
   transition-duration: .5s
   transition-timing-function: ease
+
+.section
+  overflow: hidden
+  
+
+.loader_box
+  width: 1000px
+  height: 1000px
 
 .section1.active
 
@@ -433,6 +444,7 @@ body
   height: 60px
   cursor: pointer
 
+
 .navbar_item
   text-align: center
 
@@ -479,39 +491,6 @@ body
   bottom: auto
   top: 0
   width: 80%
-
-
-
-.navbar_link
-  .hover_top
-    &:after, &:before
-      backface-visibility: hidden
-      border: 1px solid rgba(#fff, 0)
-      bottom: 0
-      content: " "
-      display: block
-      margin: 0 auto
-      position: relative
-      transition: all 280ms ease-in-out
-      width: 0
-
-.navbar_link
-  .hover_top
-    &:hover:after, &:hover:before
-      backface-visibility: hidden
-      border-color: #c3c3c3
-      transition: width 350ms ease-in-out
-      width: 80%
-      height: 2px
-      background: linear-gradient(to right, transparent, #c3c3c3, transparent)
-
-.navbar_link:hover:before
-  bottom: auto
-  top: 0
-  width: 80%
-
-
-
 
 
 .bar
@@ -590,7 +569,7 @@ body
 
 
   .logo_img
-    background: url("/src/images/logo.png") no-repeat center center
+    background: url("../images/logo.png") no-repeat center center
     background-size: 100%
     display: inline-block
     height: 100%
@@ -599,7 +578,7 @@ body
 
 .logo
   .logo_img:hover
-    background: url("/src/images/logoSun.png") no-repeat center center
+    background: url("../images/logoSun.png") no-repeat center center
     background-size: 100%
     transition: background 0.5s ease
 
@@ -608,7 +587,7 @@ body
 
 .section1
   padding: 0 15%
-  background: url("/src/images/headerbg.jpg") no-repeat center
+  background: url("../images/headerbg.jpg") no-repeat center
   background-size: cover
   width: 100%
   height: 100vh
@@ -682,9 +661,18 @@ body
     font-size: 2.3em
 
 
+@media screen and (max-width: 600px)
+  .header_me
+
+    .header_img
+      left: 0 !important
+      margin: 0 !important
+      right: auto
+
 @media screen and (max-width: 767px)
   .section1
     padding: 0
+    background: linear-gradient(to bottom, #211d12 0%, #432914 100%)
 
   .arrow
 
@@ -744,9 +732,8 @@ body
 
   .hamburger-menu
     margin-top: 50px
-    animation: logoOpacity .6s ease forwards
-    animation-delay: 3s
     opacity: 0
+
   .navbar_list
     background: transparent
 
@@ -766,6 +753,14 @@ body
     &:after, &:before
       border: none
 
+  .navbar_link
+    &:hover:after, &:hover:before
+      width: 0
+
+  .navbar_link:hover:before
+    width: 0
+
+
 
 
   .navbar-collapse.in
@@ -780,22 +775,24 @@ body
       border-top: 1px solid #c3c3c3
       border-bottom: 1px solid #c3c3c3
 
+
   .section1
     overflow: hidden
 
 
-  .header_me
-    width: 100% !important
-    overflow: hidden
-    right: 0
-    left: 0
+    .header_me
+      width: 100%
+      overflow: hidden
+      right: 0
+      left: 0
 
-  .header_img
-    position: relative
-    height: 100%
-    right: 0
-    left: 0
-    bottom: -45% !important
+      .header_img
+        position: absolute
+        height: auto
+        left: 50%
+        margin-left: -200px
+        width: 400px
+        bottom: -280px
 
 
   .title_wrapper
@@ -818,19 +815,26 @@ body
         height: calc(100% - 230px)
 
 
-  .title_case
-    width: 330px
-    height: 230px
-    animation-delay: 2.5s
+    .title_case
+      width: 330px
+      height: 230px
+      animation-delay: 2.5s
 
 
-  .title
-    vertical-align: top
-    top: 150px
-    padding: 0
-    font-size: 1.7em
-    right: 0
-    max-width: 330px
+    .title
+      vertical-align: top
+      top: 40px
+      padding: 0
+      font-size: 1.7em
+      right: 0
+      max-width: 330px
+
+
+  .section1.active
+    .hamburger-menu
+      animation: logoOpacity .6s ease forwards
+      animation-delay: 3s
+
 
 
 

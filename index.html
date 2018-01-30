@@ -5,15 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Evgeniy Sonin</title>
-    <link href="/src/styles/css/style.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/src/images/favicon.png">
-    <link href="/lib/bootstrap.css" rel="stylesheet">
-    <link href="/lib/jquery.fullPage.css" rel="stylesheet">
+    <link href="src/css/style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="src/images/favicon16.png">
+    <link rel="icon" type="image/png" href="src/images/favicon32.png">
+    <link href="lib/bootstrap.css" rel="stylesheet">
+    <link href="lib/jquery.fullPage.css" rel="stylesheet">
+    <!--script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")-->
+    <!--script(type="text/javascript" src="lib/bootstrap.min.js")-->
     <script type="text/javascript" src="lib/jquery-3.2.1.min.js"></script>
-    <!--script(type="text/javascript" src="lib/jquery.fullPage.js")-->
-    <script type="text/javascript" src="lib/jquery.fullpage.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="lib/jquery.fullpage.js"></script>
     <script type="text/javascript" src="src/js/main.js"></script>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-113142222-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+          dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'UA-113142222-1');
+      
+      
+      
+    </script>
   </head>
   <body>
     <div class="loader_box">
@@ -21,30 +34,10 @@
         <p class="line-1 anim-typewriter">made by sonin</p>
       </div>
     </div>
-    <!--nav.navbar.navbar-default.col-sm-offset-5.col-md-offset-5
-    .container-fluid
-      .navbar-header
-        button.navbar-toggle.collapsed.hamburger-menu(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
-          .bar
-    
-      #bs-example-navbar-collapse-1.collapse.navbar-collapse
-        ul.nav.navbar-nav.navbar_list#menu
-          li.navbar_item(data-menuanchor='secondPage')
-            a.navbar_link(href='#secondPage') skills
-          li.navbar_item(data-menuanchor='3rdPage')
-            a.navbar_link(href='#3rdPage') biography
-          li.navbar_item(data-menuanchor='4thPage')
-            a.navbar_link(href='#4thPage') works
-          li.navbar_item(data-menuanchor='5thPage')
-            a.navbar_link(href='#5thPage') contacts
-    
-    
-    -->
     <div id="fullpage">
       <div class="section section1 active" id="section1">
         <header>
-          <div class="menu_wrapper"><span class="arrow_right arrow_menu">
-              <svg></svg><span class="arrow_right--part1"></span><span class="arrow_right--part2"></span></span><span class="arrow_top"><span class="arrow_top--part1"></span><span class="arrow_top--part2"></span></span>
+          <div class="menu_wrapper"><span class="arrow_right arrow_menu"><span class="arrow_right--part1"></span><span class="arrow_right--part2"></span></span><span class="arrow_top"><span class="arrow_top--part1"></span><span class="arrow_top--part2"></span></span>
             <div class="menu_case"><span class="line line_left"></span><span class="line line_top"></span><span class="line line_bottom"></span><span class="line line_right"></span></div>
             <nav class="navbar navbar-default">
               <div class="navbar-header">
@@ -54,9 +47,7 @@
               </div>
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar_list">
-                  <li class="navbar_item"><a class="navbar_link" href="#secondPage">skills
-                      <div class="hover_top"></div>
-                      <div class="hover_side"></div></a></li>
+                  <li class="navbar_item"><a class="navbar_link" href="#secondPage">skills</a></li>
                   <li class="navbar_item"><a class="navbar_link" href="#3rdPage">biography</a></li>
                   <li class="navbar_item"><a class="navbar_link" href="#4thPage">works</a></li>
                   <li class="navbar_item"><a class="navbar_link" href="#5thPage">contacts</a></li>
@@ -64,18 +55,12 @@
               </div>
             </nav>
           </div>
-          <div class="logo_wrapper"><span class="arrow_left">
-              <svg></svg><span class="arrow_left--part1"></span><span class="arrow_left--part2"></span></span><span class="arrow_top"><span class="arrow_top--part1"></span><span class="arrow_top--part2"></span></span>
-            <!--.logo_case
-            span.line.line_horizontal
-            span.line.line_vertical
-            -->
-            <div class="logo_case"><span class="line line_left"></span><span class="line line_top"></span><span class="line line_bottom"></span><span class="line line_right"></span><a class="logo animation" href="index.html"><span class="logo_img"></span></a></div>
+          <div class="logo_wrapper"><span class="arrow_left"><span class="arrow_left--part1"></span><span class="arrow_left--part2"></span></span><span class="arrow_top"><span class="arrow_top--part1"></span><span class="arrow_top--part2"></span></span>
+            <div class="logo_case"><span class="line line_left"></span><span class="line line_top"></span><span class="line line_bottom"></span><span class="line line_right"></span></div><a class="logo" href="index.html"><span class="logo_img"></span></a>
           </div>
         </header>
         <div class="header_me"><img class="header_img" src="src/images/me.png"></div>
-        <div class="title_wrapper"><span class="arrow_left arrow_title">
-            <svg></svg><span class="arrow_left--part1"></span><span class="arrow_left--part2"></span></span><span class="arrow_bottom"><span class="arrow_bottom--part1"></span><span class="arrow_bottom--part2"></span></span>
+        <div class="title_wrapper"><span class="arrow_left arrow_title"><span class="arrow_left--part1"></span><span class="arrow_left--part2"></span></span><span class="arrow_bottom"><span class="arrow_bottom--part1"></span><span class="arrow_bottom--part2"></span></span>
           <div class="title_case"><span class="line line_top"></span><span class="line line_left"></span><span class="line line_bottom"></span><span class="line line_right"></span></div>
           <div class="title">
             <h1>About me</h1>
@@ -84,13 +69,11 @@
         </div>
       </div>
       <div class="section section2" id="section2">
-        <div class="skills_wrapper"><span class="arrow_left">
-            <svg></svg><span class="arrow_left--part1"></span><span class="arrow_left--part2"></span></span><span class="arrow_top mov"><span class="arrow_top--part1"></span><span class="arrow_top--part2"></span></span>
+        <div class="skills_wrapper"><span class="arrow_left"><span class="arrow_left--part1"></span><span class="arrow_left--part2"></span></span><span class="arrow_top"><span class="arrow_top--part1"></span><span class="arrow_top--part2"></span></span>
           <div class="skills_case"><span class="line line_top"></span><span class="line line_left"></span><span class="line line_bottom"></span><span class="line line_right"></span></div>
           <h1 class="skills">skills</h1>
         </div>
-        <div class="level_wrapper"><span class="arrow_left">
-            <svg></svg><span class="arrow_left--part1 mov"></span><span class="arrow_left--part2 mov"></span></span><span class="arrow_bottom"><span class="arrow_bottom--part1"></span><span class="arrow_bottom--part2"></span></span>
+        <div class="level_wrapper"><span class="arrow_left"><span class="arrow_left--part1"></span><span class="arrow_left--part2"></span></span><span class="arrow_bottom"><span class="arrow_bottom--part1"></span><span class="arrow_bottom--part2"></span></span>
           <div class="level_case"><span class="line line_top"></span><span class="line line_left"></span><span class="line line_bottom"></span><span class="line line_right"></span></div>
           <div class="level">
             <svg class="triangle" fill="url(#linear-gradient)" viewBox="0 0 100 500">
@@ -168,13 +151,11 @@
         </ul>
       </div>
       <div class="section section3" id="section3">
-        <div class="experience_wrapper"><span class="arrow_left">
-            <svg></svg><span class="arrow_left--part1"></span><span class="arrow_left--part2"></span></span><span class="arrow_top"><span class="arrow_top--part1"></span><span class="arrow_top--part2"></span></span>
-          <div class="experience_case mov"><span class="line line_left"></span><span class="line line_top"></span><span class="line line_bottom"></span><span class="line line_right"></span></div>
+        <div class="experience_wrapper"><span class="arrow_left"><span class="arrow_left--part1"></span><span class="arrow_left--part2"></span></span><span class="arrow_top"><span class="arrow_top--part1"></span><span class="arrow_top--part2"></span></span>
+          <div class="experience_case"><span class="line line_left"></span><span class="line line_top"></span><span class="line line_bottom"></span><span class="line line_right"></span></div>
           <h1 class="experience_text resume_main resume_work">Work Experience</h1>
         </div>
-        <div class="experience1_wrapper"><span class="arrow_right">
-            <svg></svg><span class="arrow_right--part1"></span><span class="arrow_right--part2"></span></span><span class="arrow_top"><span class="arrow_top--part1"></span><span class="arrow_top--part2"></span></span>
+        <div class="experience1_wrapper"><span class="arrow_right"><span class="arrow_right--part1"></span><span class="arrow_right--part2"></span></span><span class="arrow_top"><span class="arrow_top--part1"></span><span class="arrow_top--part2"></span></span>
           <div class="experience1_case"><span class="line line_left"></span><span class="line line_top"></span><span class="line line_bottom"></span><span class="line line_right"></span></div>
           <div class="experience1_block">
             <p class="resume_year">2013 – 2015 <strong class="resume_organisation">Kyivoblenergo</strong>
@@ -189,9 +170,8 @@
             </ul>
           </div>
         </div>
-        <div class="experience2_wrapper"><span class="arrow_right">
-            <svg></svg><span class="arrow_right--part1"></span><span class="arrow_right--part2"></span></span>
-          <div class="experience2_case"><span class="line line_left mov"></span><span class="line line_top mov"></span><span class="line line_bottom mov"></span><span class="line line_right mov"></span></div>
+        <div class="experience2_wrapper"><span class="arrow_right"><span class="arrow_right--part1"></span><span class="arrow_right--part2"></span></span>
+          <div class="experience2_case"><span class="line line_left"></span><span class="line line_top"></span><span class="line line_bottom"></span><span class="line line_right"></span></div>
           <div class="experience2_block">
             <p class="resume_text">2010 – 2012   <strong class="resume_organisation"> Universal Bank</strong>
             </p>
@@ -203,37 +183,32 @@
             </ul>
           </div>
         </div>
-        <div class="education_wrapper"><span class="arrow_left">
-            <svg></svg><span class="arrow_left--part1"></span><span class="arrow_left--part2"></span></span><span class="arrow_bottom"><span class="arrow_bottom--part1"></span><span class="arrow_bottom--part2"></span></span>
+        <div class="education_wrapper"><span class="arrow_left"><span class="arrow_left--part1"></span><span class="arrow_left--part2"></span></span><span class="arrow_bottom"><span class="arrow_bottom--part1"></span><span class="arrow_bottom--part2"></span></span>
           <div class="education_case"><span class="line line_left"></span><span class="line line_top"></span><span class="line line_bottom"></span><span class="line line_right"></span></div>
           <h1 class="education_main">Education</h1>
         </div>
-        <div class="university_wrapper"><span class="arrow_right">
-            <svg></svg><span class="arrow_right--part1"></span><span class="arrow_right--part2"></span></span><span class="arrow_bottom"><span class="arrow_bottom--part1"></span><span class="arrow_bottom--part2"></span></span>
+        <div class="university_wrapper"><span class="arrow_right"><span class="arrow_right--part1"></span><span class="arrow_right--part2"></span></span><span class="arrow_bottom"><span class="arrow_bottom--part1"></span><span class="arrow_bottom--part2"></span></span>
           <div class="university_case"><span class="line line_left"></span><span class="line line_top"></span><span class="line line_bottom"></span><span class="line line_right"></span></div>
           <p class="university_text">2006 - 2011<strong class="university_name"> National Transport University</strong> <br>Automechanical Faculty <br>Specialty: Automobiles
           </p>
         </div>
         <div class="botton_wrapper"><span class="arrow_right"><span class="arrow_right--part1"></span><span class="arrow_right--part2"></span></span><span class="arrow_left"><span class="arrow_left--part1"></span><span class="arrow_left--part2"></span></span><span class="arrow_bottom"><span class="arrow_bottom--part1"></span><span class="arrow_bottom--part2"></span></span>
           <div class="botton_case"><span class="line line_left"></span><span class="line line_top"></span><span class="line line_bottom"></span><span class="line line_right"></span></div>
-          <div class="botton"><a class="botton_link" href="/src/Resume Sonin.Ievgen.pdf">download resume</a></div>
+          <div class="botton"><a class="botton_link" href="src/Resume Sonin.Ievgen.pdf">download resume</a></div>
         </div>
       </div>
       <div class="section section4" id="section4">
-        <div class="works_wrapper"><span class="arrow_left">
-            <svg></svg><span class="arrow_left--part1"></span><span class="arrow_left--part2"></span></span><span class="arrow_top"><span class="arrow_top--part1"></span><span class="arrow_top--part2"></span></span>
+        <div class="works_wrapper"><span class="arrow_left"><span class="arrow_left--part1"></span><span class="arrow_left--part2"></span></span><span class="arrow_top"><span class="arrow_top--part1"></span><span class="arrow_top--part2"></span></span>
           <div class="works_case"><span class="line line_left"></span><span class="line line_top"></span><span class="line line_bottom"></span><span class="line line_right"></span></div>
           <h1 class="works_header">works</h1>
         </div>
-        <div class="work1_wrapper"><span class="arrow_left">
-            <svg></svg><span class="arrow_left--part1"></span><span class="arrow_left--part2"></span></span><span class="arrow_bottom"><span class="arrow_bottom--part1"></span><span class="arrow_bottom--part2"></span></span>
+        <div class="work1_wrapper"><span class="arrow_left"><span class="arrow_left--part1"></span><span class="arrow_left--part2"></span></span><span class="arrow_bottom"><span class="arrow_bottom--part1"></span><span class="arrow_bottom--part2"></span></span>
           <div class="work1_case"><span class="line line_left"></span><span class="line line_top"></span><span class="line line_bottom"></span><span class="line line_right"></span></div>
-          <div class="work1_item"><a class="works_link col" href="#"><img class="works_img" src="/src/images/siteAO.jpg"></a></div>
+          <div class="work1_item"><a class="works_link col" href="#"><img class="works_img" src="src/images/siteAO.jpg"></a></div>
         </div>
-        <div class="work2_wrapper"><span class="arrow_right">
-            <svg></svg><span class="arrow_right--part1"></span><span class="arrow_right--part2"></span></span><span class="arrow_bottom"><span class="arrow_bottom--part1"></span><span class="arrow_bottom--part2"></span></span>
+        <div class="work2_wrapper"><span class="arrow_right"><span class="arrow_right--part1"></span><span class="arrow_right--part2"></span></span><span class="arrow_bottom"><span class="arrow_bottom--part1"></span><span class="arrow_bottom--part2"></span></span>
           <div class="work2_case"><span class="line line_left"></span><span class="line line_top"></span><span class="line line_bottom"></span><span class="line line_right"></span></div>
-          <div class="work2_item"><a class="works_link col" href="#"><img class="works_img" src="/src/images/sitevideopro.jpg"></a></div>
+          <div class="work2_item"><a class="works_link col" href="#"><img class="works_img" src="src/images/sitevideopro.jpg"></a></div>
         </div>
       </div>
       <div class="section section5" id="section5">
@@ -260,6 +235,14 @@
               </div>
             </form>
           </div>
+        </div>
+        <div class="social_wrapper"><span class="arrow_left"><span class="arrow_left--part1"></span><span class="arrow_left--part2"></span></span><span class="arrow_right"><span class="arrow_right--part1"></span><span class="arrow_right--part2"></span></span><span class="arrow_bottom"><span class="arrow_bottom--part1"></span><span class="arrow_bottom--part2"></span></span>
+          <div class="social_case"><span class="line line_left"></span><span class="line line_top"></span><span class="line line_bottom"></span><span class="line line_right"></span></div>
+          <ul class="social_list">
+            <li class="social_item"><a class="social_link" href="https://www.facebook.com/profile.php?id=100004749393965"><span class="social_img social_img__face"></span><span class="line line_left"></span><span class="line line_top"></span><span class="line line_bottom"></span><span class="line line_right"></span></a></li>
+            <li class="social_item"><a class="social_link" href="https://www.instagram.com/xpatrickx75/"><span class="social_img social_img__inst"></span><span class="line line_left"></span><span class="line line_top"></span><span class="line line_bottom"></span><span class="line line_right"></span></a></li>
+            <li class="social_item"><a class="social_link" href="https://www.youtube.com/channel/UCVvlLrdi5R2yOfuve0rNP9A?view_as=subscriber"><span class="social_img social_img__yout"></span><span class="line line_left"></span><span class="line line_top"></span><span class="line line_bottom"></span><span class="line line_right"></span></a></li>
+          </ul>
         </div>
       </div>
     </div>

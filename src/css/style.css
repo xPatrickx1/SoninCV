@@ -1,12 +1,21 @@
 body {
   font-family: sans-serif;
-  transition: all 3s ease; }
+  transition: all 3s ease;
+  margin: 0;
+  font-size: 0.9em; }
 
 * {
   box-sizing: inherit;
   transition-property: all;
   transition-duration: .5s;
   transition-timing-function: ease; }
+
+.section {
+  overflow: hidden; }
+
+.loader_box {
+  width: 1000px;
+  height: 1000px; }
 
 .section1.active .arrow_left:before {
   animation: setArrowLeft 1.2s ease forwards;
@@ -409,30 +418,6 @@ body {
   top: 0;
   width: 80%; }
 
-.navbar_link .hover_top:after, .navbar_link .hover_top:before {
-  backface-visibility: hidden;
-  border: 1px solid rgba(255, 255, 255, 0);
-  bottom: 0;
-  content: " ";
-  display: block;
-  margin: 0 auto;
-  position: relative;
-  transition: all 280ms ease-in-out;
-  width: 0; }
-
-.navbar_link .hover_top:hover:after, .navbar_link .hover_top:hover:before {
-  backface-visibility: hidden;
-  border-color: #c3c3c3;
-  transition: width 350ms ease-in-out;
-  width: 80%;
-  height: 2px;
-  background: linear-gradient(to right, transparent, #c3c3c3, transparent); }
-
-.navbar_link:hover:before {
-  bottom: auto;
-  top: 0;
-  width: 80%; }
-
 .bar {
   width: 50px;
   height: 5px;
@@ -493,20 +478,20 @@ body {
   transition: all 0.5s ease;
   opacity: 0; }
   .logo .logo_img {
-    background: url("/src/images/logo.png") no-repeat center center;
+    background: url("../images/logo.png") no-repeat center center;
     background-size: 100%;
     display: inline-block;
     height: 100%;
     width: 100%; }
 
 .logo .logo_img:hover {
-  background: url("/src/images/logoSun.png") no-repeat center center;
+  background: url("../images/logoSun.png") no-repeat center center;
   background-size: 100%;
   transition: background 0.5s ease; }
 
 .section1 {
   padding: 0 15%;
-  background: url("/src/images/headerbg.jpg") no-repeat center;
+  background: url("../images/headerbg.jpg") no-repeat center;
   background-size: cover;
   width: 100%;
   height: 100vh;
@@ -565,9 +550,16 @@ body {
   .title_case h1 {
     font-size: 2.3em; }
 
+@media screen and (max-width: 600px) {
+  .header_me .header_img {
+    left: 0 !important;
+    margin: 0 !important;
+    right: auto; } }
+
 @media screen and (max-width: 767px) {
   .section1 {
-    padding: 0; }
+    padding: 0;
+    background: linear-gradient(to bottom, #211d12 0%, #432914 100%); }
   .arrow_left {
     top: 40px;
     height: 80px;
@@ -609,8 +601,6 @@ body {
       top: 50px; }
   .hamburger-menu {
     margin-top: 50px;
-    animation: logoOpacity .6s ease forwards;
-    animation-delay: 3s;
     opacity: 0; }
   .navbar_list {
     background: transparent; }
@@ -625,6 +615,10 @@ body {
     animation-delay: 0s; }
   .navbar_link:after, .navbar_link:before {
     border: none; }
+  .navbar_link:hover:after, .navbar_link:hover:before {
+    width: 0; }
+  .navbar_link:hover:before {
+    width: 0; }
   .navbar-collapse.in .navbar_item {
     top: 0;
     vertical-align: middle;
@@ -637,17 +631,18 @@ body {
     border-bottom: 1px solid #c3c3c3; }
   .section1 {
     overflow: hidden; }
-  .header_me {
-    width: 100% !important;
-    overflow: hidden;
-    right: 0;
-    left: 0; }
-  .header_img {
-    position: relative;
-    height: 100%;
-    right: 0;
-    left: 0;
-    bottom: -45% !important; }
+    .section1 .header_me {
+      width: 100%;
+      overflow: hidden;
+      right: 0;
+      left: 0; }
+      .section1 .header_me .header_img {
+        position: absolute;
+        height: auto;
+        left: 50%;
+        margin-left: -200px;
+        width: 400px;
+        bottom: -280px; }
   .title_wrapper {
     position: absolute;
     bottom: 0;
@@ -662,17 +657,20 @@ body {
     .title_wrapper .arrow_bottom {
       width: 330px;
       height: calc(100% - 230px); }
-  .title_case {
-    width: 330px;
-    height: 230px;
-    animation-delay: 2.5s; }
-  .title {
-    vertical-align: top;
-    top: 150px;
-    padding: 0;
-    font-size: 1.7em;
-    right: 0;
-    max-width: 330px; } }
+    .title_wrapper .title_case {
+      width: 330px;
+      height: 230px;
+      animation-delay: 2.5s; }
+    .title_wrapper .title {
+      vertical-align: top;
+      top: 40px;
+      padding: 0;
+      font-size: 1.7em;
+      right: 0;
+      max-width: 330px; }
+  .section1.active .hamburger-menu {
+    animation: logoOpacity .6s ease forwards;
+    animation-delay: 3s; } }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .menu_wrapper {
@@ -797,127 +795,127 @@ body {
   animation-delay: 0.3s; }
 
 .section2.active .level_wrapper .arrow_left:before {
-  animation: setArrowLeft 1.2s ease forwards;
-  animation-delay: 1.6s; }
+  animation: setArrowLeft .6s ease forwards;
+  animation-delay: .9s; }
 
 .section2.active .level_wrapper .arrow_left--part1 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.9s; }
+  animation-delay: 1.2s; }
 
 .section2.active .level_wrapper .arrow_left--part2 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.9s; }
+  animation-delay: 1.2s; }
 
 .section2.active .level_wrapper .arrow_bottom:before {
   animation: setArrowBottom 1.2s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: .9s; }
 
 .section2.active .level_wrapper .arrow_bottom--part1 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.9s; }
+  animation-delay: 1.2s; }
 
 .section2.active .level_wrapper .arrow_bottom--part2 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.9s; }
+  animation-delay: 1.2s; }
 
 .section2.active .level_wrapper .level_case .line_left {
   animation: lineHeight 1.1s ease forwards;
-  animation-delay: 1.9s; }
+  animation-delay: 1.2s; }
 
 .section2.active .level_wrapper .level_case .line_top {
   animation: lineWidth 1.1s ease forwards;
-  animation-delay: 1.9s; }
+  animation-delay: 1.2s; }
 
 .section2.active .level_wrapper .level_case .line_right {
   animation: lineHeight 1.1s ease forwards;
-  animation-delay: 1.9s; }
+  animation-delay: 1.2s; }
 
 .section2.active .level_wrapper .level_case .line_bottom {
   animation: lineWidth 1.1s ease forwards;
-  animation-delay: 1.9s; }
+  animation-delay: 1.2s; }
 
 .section2.active .skills {
   animation: logoOpacity .6s ease forwards;
-  animation-delay: 1.9s; }
+  animation-delay: .9s; }
 
 .section2.active .skills_wrapper .arrow_left:before {
   animation: setArrowLeft 1.2s ease forwards;
-  animation-delay: 1s; }
+  animation-delay: .3s; }
 
 .section2.active .skills_wrapper .arrow_left--part1 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section2.active .skills_wrapper .arrow_left--part2 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section2.active .skills_wrapper .arrow_top:before {
   animation: setArrowTop 1.2s ease forwards;
-  animation-delay: 1s; }
+  animation-delay: .3s; }
 
 .section2.active .skills_wrapper .arrow_top--part1 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section2.active .skills_wrapper .arrow_top--part2 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section2.active .skills_case .line_left {
   animation: lineHeight 1.1s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: .6s; }
 
 .section2.active .skills_case .line_top {
   animation: lineWidth 1.1s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: .6s; }
 
 .section2.active .skills_case .line_right {
   animation: lineHeight 1.1s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: .6s; }
 
 .section2.active .skills_case .line_bottom {
   animation: lineWidth 1.1s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: .6s; }
 
 .section2.active .triline {
-  animation: dash 1.5s linear forwards;
-  animation-delay: 2.5s; }
+  animation: dash 1.3s linear forwards;
+  animation-delay: 1.2s; }
 
 .section2.active stop {
-  animation: colors 3.6s ease;
+  animation: colors 1.6s ease;
   animation-delay: 0s; }
 
 .section2.active .skills_item {
   animation: flipInY 1s ease forwards; }
   .section2.active .skills_item__html {
-    animation-delay: 3.3s; }
+    animation-delay: 1.5s; }
   .section2.active .skills_item__css {
-    animation-delay: 3.4s; }
+    animation-delay: 1.6s; }
   .section2.active .skills_item__less {
-    animation-delay: 3.5s; }
+    animation-delay: 1.7s; }
   .section2.active .skills_item__sass {
-    animation-delay: 3.6s; }
+    animation-delay: 1.8s; }
   .section2.active .skills_item__bootstrap {
-    animation-delay: 3.3s; }
+    animation-delay: 1.5s; }
   .section2.active .skills_item__bem {
-    animation-delay: 3.4s; }
+    animation-delay: 1.6s; }
   .section2.active .skills_item__photoshop {
-    animation-delay: 3.5s; }
+    animation-delay: 1.7s; }
   .section2.active .skills_item__illustrator {
-    animation-delay: 3.6s; }
+    animation-delay: 1.8s; }
   .section2.active .skills_item__premier {
-    animation-delay: 3.7s; }
+    animation-delay: 1.9s; }
   .section2.active .skills_item__git {
-    animation-delay: 3.3s; }
+    animation-delay: 1.5s; }
   .section2.active .skills_item__gulp {
-    animation-delay: 3.3s; }
+    animation-delay: 1.6s; }
   .section2.active .skills_item__javas {
-    animation-delay: 3.3s; }
+    animation-delay: 1.5s; }
   .section2.active .skills_item__jquery {
-    animation-delay: 3.3s; }
+    animation-delay: 1.6s; }
   .section2.active .skills_item__node {
-    animation-delay: 3.3s; }
+    animation-delay: 1.7s; }
 
 .skills_wrapper {
   position: absolute;
@@ -968,7 +966,9 @@ body {
   .level_wrapper .level_case {
     position: absolute;
     top: 0;
-    right: 0; }
+    right: 0;
+    width: 110px;
+    height: 520px; }
 
 .level {
   position: absolute;
@@ -1002,7 +1002,7 @@ body {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  background: url("/src/images/skillSprite.png") no-repeat;
+  background: url("../images/skillSprite.png") no-repeat;
   -webkit-background-size: 400%;
   background-size: 400%;
   width: 100%;
@@ -1037,6 +1037,24 @@ body {
     background-position: 0 -252px; }
 
 @media screen and (max-width: 767px) {
+  .skills_wrapper {
+    width: 100%; }
+    .skills_wrapper .arrow_left {
+      width: calc(50% - 75px);
+      height: 66px;
+      bottom: 0;
+      top: auto; }
+    .skills_wrapper .arrow_top {
+      right: calc(50% - 75px);
+      width: 150px;
+      height: calc(100% - 66px); }
+    .skills_wrapper .skills_case {
+      right: calc(50% - 75px);
+      width: 150px;
+      height: 66px; }
+    .skills_wrapper .skills {
+      left: calc(50% - 75px);
+      width: 150px; }
   .level_wrapper {
     width: 17%;
     height: 68%; }
@@ -1056,13 +1074,13 @@ body {
     text-align: center;
     left: 0; }
   .skills_list {
-    width: 400px;
-    margin: 100px 8% 0 0;
-    float: right; }
+    min-width: 360px;
+    width: 50%;
+    margin: 100px 10% 0 30%; }
   .skills_item {
     width: 70px;
     height: 70px;
-    margin: 20px 5px; }
+    margin: 15px 2px; }
   .skills_img {
     -webkit-background-size: 400%;
     background-size: 400%; }
@@ -1095,17 +1113,25 @@ body {
     .skills_img__node {
       background-position: 0 -192px; } }
 
-@media screen and (min-width: 768px) {
-  .level_wrapper .level_case {
-    width: 110px;
-    height: 520px; } }
+@media screen and (max-width: 560px) {
+  .level_wrapper {
+    width: 20%;
+    height: 74%; }
+  .skills_list {
+    min-width: 320px !important;
+    margin: 100px 0 0 21%; }
+  .skills_item {
+    margin: 5px 2px !important; } }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .skills_list {
     width: 540px;
     margin: 100px 0 0 30%; }
   .level_wrapper {
-    width: 22%; } }
+    width: 22%; }
+    .level_wrapper .level_case {
+      width: 110px;
+      height: 520px; } }
 
 .section3 {
   background: #151515;
@@ -1285,36 +1311,37 @@ body {
   height: 15%; }
   .botton_wrapper .botton {
     margin: 20px auto 0;
-    width: 260px;
+    width: 280px;
     opacity: 0; }
     .botton_wrapper .botton_link {
       color: #c3c3c3;
       font-size: 1.3em;
       text-transform: uppercase;
       border: 2px solid #c3c3c3;
-      padding: 20px 35px;
-      cursor: pointer; }
+      padding: 20px 40px;
+      cursor: pointer;
+      text-decoration: none; }
       .botton_wrapper .botton_link:hover {
         background: #c3c3c3;
         color: #000;
         text-decoration: none; }
   .botton_wrapper .arrow_right {
-    width: calc(50% - 130px);
+    width: calc(50% - 140px);
     height: 65px;
     top: 0; }
   .botton_wrapper .arrow_left {
-    width: calc(50% - 130px);
+    width: calc(50% - 140px);
     height: 65px;
     top: 0; }
   .botton_wrapper .arrow_bottom {
-    width: 260px;
+    width: 300px;
     height: calc(100% - 65px);
-    left: calc(50% - 130px); }
+    left: calc(50% - 140px); }
   .botton_wrapper .botton_case {
     position: absolute;
     top: 0;
-    left: calc(50% - 130px);
-    width: 260px;
+    left: calc(50% - 140px);
+    width: 270px;
     height: 65px; }
 
 @keyframes color {
@@ -1329,341 +1356,493 @@ body {
 
 .section3.active .experience_wrapper .arrow_left:before {
   animation: setArrowLeft 1.2s ease forwards;
-  animation-delay: 1s; }
+  animation-delay: .3s; }
 
 .section3.active .experience_wrapper .arrow_left--part1 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: 1.6s; }
 
 .section3.active .experience_wrapper .arrow_left--part2 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: 1.6s; }
 
 .section3.active .experience_wrapper .arrow_top:before {
   animation: setArrowTop 1.2s ease forwards;
-  animation-delay: 1s; }
+  animation-delay: .3s; }
 
 .section3.active .experience_wrapper .arrow_top--part1 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section3.active .experience_wrapper .arrow_top--part2 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section3.active .experience_wrapper .experience_case .line_left {
   animation: lineHeight 1.1s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section3.active .experience_wrapper .experience_case .line_top {
   animation: lineWidth 1.1s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section3.active .experience_wrapper .experience_case .line_right {
   animation: lineHeight 1.1s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section3.active .experience_wrapper .experience_case .line_bottom {
   animation: lineWidth 1.1s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section3.active .experience_wrapper .experience_text {
   animation: logoOpacity .6s ease forwards;
-  animation-delay: 1.9s; }
+  animation-delay: .9s; }
 
 .section3.active .experience1_wrapper .arrow_top:before {
-  animation: setArrowTop 1.2s ease forwards;
-  animation-delay: 2s; }
+  animation: setArrowTop .6s ease forwards;
+  animation-delay: .6s; }
 
 .section3.active .experience1_wrapper .arrow_top--part1 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 2.3s; }
+  animation-delay: .9s; }
 
 .section3.active .experience1_wrapper .arrow_top--part2 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 2.3s; }
+  animation-delay: .9s; }
 
 .section3.active .experience1_wrapper .arrow_right:before {
   animation: setArrowRight 1.2s ease forwards;
-  animation-delay: 2s; }
+  animation-delay: .6s; }
 
 .section3.active .experience1_wrapper .arrow_right--part1 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 2.3s; }
+  animation-delay: .9s; }
 
 .section3.active .experience1_wrapper .arrow_right--part2 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 2.3s; }
+  animation-delay: .9s; }
 
 .section3.active .experience1_wrapper .experience1_case .line_left {
   animation: lineHeight 1.1s ease forwards;
-  animation-delay: 2.3s; }
+  animation-delay: .9s; }
 
 .section3.active .experience1_wrapper .experience1_case .line_top {
   animation: lineWidth 1.1s ease forwards;
-  animation-delay: 2.3s; }
+  animation-delay: .9s; }
 
 .section3.active .experience1_wrapper .experience1_case .line_right {
   animation: lineHeight 1.1s ease forwards;
-  animation-delay: 2.3s; }
+  animation-delay: .9s; }
 
 .section3.active .experience1_wrapper .experience1_case .line_bottom {
   animation: lineWidth 1.1s ease forwards;
-  animation-delay: 2.3s; }
+  animation-delay: .9s; }
 
 .section3.active .experience1_wrapper .experience1_block {
   animation: logoOpacity .6s ease forwards;
-  animation-delay: 2.9s; }
+  animation-delay: 1.2s; }
 
 .section3.active .experience2_wrapper .arrow_right:before {
   animation: setArrowRight 1.2s ease forwards;
-  animation-delay: 2.3s; }
+  animation-delay: .9s; }
 
 .section3.active .experience2_wrapper .arrow_right--part1 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 2.6s; }
+  animation-delay: 1.2s; }
 
 .section3.active .experience2_wrapper .arrow_right--part2 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 2.6s; }
+  animation-delay: 1.2s; }
 
 .section3.active .experience2_wrapper .experience2_case .line_left {
   animation: lineHeight 1.1s ease forwards;
-  animation-delay: 2.6s; }
+  animation-delay: 1.2s; }
 
 .section3.active .experience2_wrapper .experience2_case .line_top {
   animation: lineWidth 1.1s ease forwards;
-  animation-delay: 2.6s; }
+  animation-delay: 1.2s; }
 
 .section3.active .experience2_wrapper .experience2_case .line_right {
   animation: lineHeight 1.1s ease forwards;
-  animation-delay: 2.6s; }
+  animation-delay: 1.2s; }
 
 .section3.active .experience2_wrapper .experience2_case .line_bottom {
   animation: lineWidth 1.1s ease forwards;
-  animation-delay: 2.6s; }
+  animation-delay: 1.2s; }
 
 .section3.active .experience2_wrapper .experience2_block {
   animation: logoOpacity .6s ease forwards;
-  animation-delay: 3s; }
+  animation-delay: 1.5s; }
 
 .section3.active .education_wrapper .arrow_left:before {
   animation: setArrowLeft 1.2s ease forwards;
-  animation-delay: 3s; }
+  animation-delay: 1.2s; }
 
 .section3.active .education_wrapper .arrow_left--part1 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 3.3s; }
+  animation-delay: 1.5s; }
 
 .section3.active .education_wrapper .arrow_left--part2 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 3.3s; }
+  animation-delay: 1.5s; }
 
 .section3.active .education_wrapper .arrow_bottom:before {
   animation: setArrowBottom 1.2s ease forwards;
-  animation-delay: 3s; }
+  animation-delay: 1.2s; }
 
 .section3.active .education_wrapper .arrow_bottom--part1 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 3.3s; }
+  animation-delay: 1.5s; }
 
 .section3.active .education_wrapper .arrow_bottom--part2 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 3.3s; }
+  animation-delay: 1.5s; }
 
 .section3.active .education_wrapper .education_case .line_left {
   animation: lineHeight 1.1s ease forwards;
-  animation-delay: 3.3s; }
+  animation-delay: 1.5s; }
 
 .section3.active .education_wrapper .education_case .line_top {
   animation: lineWidth 1.1s ease forwards;
-  animation-delay: 3.3s; }
+  animation-delay: 1.5s; }
 
 .section3.active .education_wrapper .education_case .line_right {
   animation: lineHeight 1.1s ease forwards;
-  animation-delay: 3.3s; }
+  animation-delay: 1.5s; }
 
 .section3.active .education_wrapper .education_case .line_bottom {
   animation: lineWidth 1.1s ease forwards;
-  animation-delay: 3.3s; }
+  animation-delay: 1.5s; }
 
 .section3.active .education_wrapper .education_main {
   animation: logoOpacity .6s ease forwards;
-  animation-delay: 3.6s; }
+  animation-delay: 1.8s; }
 
 .section3.active .university_wrapper .arrow_right:before {
   animation: setArrowRight 1.2s ease forwards;
-  animation-delay: 3.3s; }
+  animation-delay: 1.5s; }
 
 .section3.active .university_wrapper .arrow_right--part1 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 3.6s; }
+  animation-delay: 1.8s; }
 
 .section3.active .university_wrapper .arrow_right--part2 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 3.6s; }
+  animation-delay: 1.8s; }
 
 .section3.active .university_wrapper .arrow_bottom:before {
   animation: setArrowBottom 1.2s ease forwards;
-  animation-delay: 3.3s; }
+  animation-delay: 1.5s; }
 
 .section3.active .university_wrapper .arrow_bottom--part1 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 3.6s; }
+  animation-delay: 1.8s; }
 
 .section3.active .university_wrapper .arrow_bottom--part2 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 3.6s; }
+  animation-delay: 1.8s; }
 
 .section3.active .university_wrapper .university_case .line_left {
   animation: lineHeight 1.1s ease forwards;
-  animation-delay: 3.6s; }
+  animation-delay: 1.8s; }
 
 .section3.active .university_wrapper .university_case .line_top {
   animation: lineWidth 1.1s ease forwards;
-  animation-delay: 3.6s; }
+  animation-delay: 1.8s; }
 
 .section3.active .university_wrapper .university_case .line_right {
   animation: lineHeight 1.1s ease forwards;
-  animation-delay: 3.6s; }
+  animation-delay: 1.8s; }
 
 .section3.active .university_wrapper .university_case .line_bottom {
   animation: lineWidth 1.1s ease forwards;
-  animation-delay: 3.6s; }
+  animation-delay: 1.8s; }
 
 .section3.active .university_wrapper .university_text {
   animation: logoOpacity .6s ease forwards;
-  animation-delay: 3.6s; }
+  animation-delay: 2.1s; }
 
 .section3.active .botton_wrapper .arrow_right:before {
   animation: setArrowRight 1.2s ease forwards;
-  animation-delay: 3.6s; }
+  animation-delay: 1.8s; }
 
 .section3.active .botton_wrapper .arrow_right--part1 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 3.9s; }
+  animation-delay: 2.1s; }
 
 .section3.active .botton_wrapper .arrow_right--part2 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 3.9s; }
+  animation-delay: 2.1s; }
 
 .section3.active .botton_wrapper .arrow_bottom:before {
   top: -150%;
   animation: setArrowBottom 1.2s ease forwards;
-  animation-delay: 3.6s; }
+  animation-delay: 1.8s; }
 
 .section3.active .botton_wrapper .arrow_bottom--part1 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 3.9s; }
+  animation-delay: 2.1s; }
 
 .section3.active .botton_wrapper .arrow_bottom--part2 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 3.9s; }
+  animation-delay: 2.1s; }
 
 .section3.active .botton_wrapper .arrow_left:before {
   animation: setArrowLeft 1.2s ease forwards;
-  animation-delay: 3.6s; }
+  animation-delay: 1.8s; }
 
 .section3.active .botton_wrapper .arrow_left--part1 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 3.9s; }
+  animation-delay: 2.1s; }
 
 .section3.active .botton_wrapper .arrow_left--part2 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 3.9s; }
+  animation-delay: 2.1s; }
 
 .section3.active .botton_wrapper .line_left {
   animation: lineHeight 1.1s ease forwards;
-  animation-delay: 3.9s; }
+  animation-delay: 2.1s; }
 
 .section3.active .botton_wrapper .line_top {
   animation: lineWidth 1.1s ease forwards;
-  animation-delay: 3.9s; }
+  animation-delay: 2.1s; }
 
 .section3.active .botton_wrapper .line_right {
   animation: lineHeight 1.1s ease forwards;
-  animation-delay: 3.9s; }
+  animation-delay: 2.1s; }
 
 .section3.active .botton_wrapper .line_bottom {
   animation: lineWidth 1.1s ease forwards;
-  animation-delay: 3.9s; }
+  animation-delay: 2.1s; }
 
 .section3.active .botton_wrapper .botton {
   animation: logoOpacity .6s ease forwards;
-  animation-delay: 4s; }
+  animation-delay: 2.4s; }
 
 @media screen and (max-width: 767px) {
   .experience_wrapper {
     width: 100%;
-    height: 80px; }
+    height: 70px; }
+    .experience_wrapper .arrow_left {
+      top: auto;
+      bottom: 0;
+      width: calc(50% - 115px);
+      left: 0; }
+    .experience_wrapper .arrow_top {
+      left: calc(50% - 115px);
+      height: calc(100% - 40px); }
+    .experience_wrapper .experience_case {
+      left: calc(50% - 115px); }
+    .experience_wrapper .experience_text {
+      left: calc(50% - 115px);
+      font-size: 2em; }
+  .experience1_wrapper {
+    width: 95%;
+    height: 50%; }
+    .experience1_wrapper .arrow_right {
+      width: calc(50% - 180px);
+      height: 360px; }
+    .experience1_wrapper .arrow_top {
+      width: 360px;
+      height: calc(100% - 360px);
+      left: calc(50% - 180px); }
+    .experience1_wrapper .experience1_case {
+      left: calc(50% - 180px);
+      width: 360px;
+      height: 360px; }
+    .experience1_wrapper .experience1_block {
+      width: 360px;
+      height: 360px;
+      min-width: 300px;
+      left: calc(50% - 180px); }
+  .resume_list {
+    padding: 0 20px; }
+  .resume_item {
+    font-size: 1.3em;
+    line-height: 1.5em; }
+  .resume_text {
+    font-size: 1.5em;
+    margin: 0; }
+  .resume_year {
+    font-size: 1.5em;
+    margin: 0; }
+  .experience2_wrapper {
+    width: 95%;
+    height: 70%; }
+    .experience2_wrapper .arrow_right {
+      width: 20%;
+      height: 160px; }
+    .experience2_wrapper .experience2_case {
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 180px);
+      width: 360px;
+      height: 160px; }
+    .experience2_wrapper .experience2_block {
+      margin-top: 0;
+      width: 360px;
+      height: 160px;
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 180px); }
+  .education_wrapper {
+    width: 100%;
+    height: 30%; }
+    .education_wrapper .arrow_left {
+      width: calc(50% - 75px);
+      height: 30px; }
+    .education_wrapper .arrow_bottom {
+      width: 150px;
+      height: calc(100% - 30px);
+      margin: 0;
+      left: calc(50% - 75px); }
+    .education_wrapper .education_case {
+      left: calc(50% - 75px);
+      height: 30px;
+      width: 150px; }
+    .education_wrapper .education_main {
+      left: calc(50% - 75px);
+      font-size: 1.8em;
+      height: 30px;
+      width: 150px; }
+  .university_wrapper {
+    width: 95%;
+    height: 25%; }
+    .university_wrapper .arrow_bottom {
+      width: 360px;
+      height: calc(100% - 90px);
+      left: 0; }
+    .university_wrapper .arrow_right {
+      width: calc(50% - 180px); }
+    .university_wrapper .university_case {
+      position: absolute;
+      top: 0;
+      left: calc(50% - 180px);
+      width: 360px;
+      height: 90px; }
+    .university_wrapper .university_text {
+      position: absolute;
+      font-size: 1.3em;
+      width: 360px;
+      left: calc(50% - 180px); }
+  .botton_wrapper {
+    height: 12%; }
+    .botton_wrapper .arrow_right {
+      width: calc(50% - 135px); }
+    .botton_wrapper .arrow_bottom {
+      width: 270px; }
+      .botton_wrapper .arrow_bottom:before {
+        top: -230% !important; }
+    .botton_wrapper .botton_case {
+      width: 270px; } }
+
+@media screen and (max-width: 500px) {
+  .experience_wrapper {
+    width: 100%;
+    height: 40px; }
     .experience_wrapper .arrow_left {
       top: auto;
       bottom: 0;
       width: 10%; }
     .experience_wrapper .arrow_top {
-      left: 10%; }
+      left: calc(50% - 165px);
+      height: 0; }
     .experience_wrapper .experience_case {
       left: 10%; }
     .experience_wrapper .experience_text {
-      left: 10%; }
+      left: 10%;
+      font-size: 1.8em; }
   .experience1_wrapper {
-    width: 95%; }
+    width: 95%;
+    height: 330px; }
     .experience1_wrapper .arrow_right {
       width: 5%;
-      height: 315px; }
+      height: 290px; }
     .experience1_wrapper .arrow_top {
-      width: 80%;
-      height: calc(100% - 315px);
+      width: 95%;
+      height: calc(100% - 290px);
       left: 0; }
     .experience1_wrapper .experience1_case {
-      width: 80%; }
+      width: 95%;
+      height: 290px; }
     .experience1_wrapper .experience1_block {
-      min-width: 300px;
-      min-height: 315px; }
+      width: 360px;
+      height: 290px;
+      min-width: 300px; }
+  .resume_list {
+    padding: 0 20px; }
+  .resume_item {
+    font-size: 16px;
+    line-height: 1.5em; }
+  .resume_text {
+    font-size: 1.3em;
+    margin: 0; }
+  .resume_year {
+    font-size: 1.3em;
+    margin: 0; }
   .experience2_wrapper {
-    width: 95%; }
-  .arrow_right {
-    width: 20%;
-    height: 160px; }
-  .experience2_case {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 80%;
-    height: 160px; }
-  .experience2_block {
-    margin-top: 0;
-    width: 80%;
-    height: 160px;
-    position: absolute;
-    bottom: 0;
-    left: 0; }
+    width: 95%;
+    height: 450px; }
+    .experience2_wrapper .arrow_right {
+      width: 5%;
+      height: 120px; }
+    .experience2_wrapper .experience2_case {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 95%;
+      height: 120px; }
+    .experience2_wrapper .experience2_block {
+      margin-top: 0;
+      width: 360px;
+      height: 120px;
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 180px); }
   .education_wrapper {
     width: 100%;
-    height: 28%; }
+    height: 31%; }
     .education_wrapper .arrow_left {
-      width: 10%; }
+      width: 10%;
+      height: 30px; }
     .education_wrapper .arrow_bottom {
-      width: 190px;
-      height: calc(100% - 40px);
-      margin-right: 50px; }
+      width: 150px;
+      height: calc(100% - 30px);
+      margin: 0;
+      left: 10%;
+      opacity: 0; }
     .education_wrapper .education_case {
-      left: 10%; }
+      left: 10%;
+      width: 150px;
+      height: 30px; }
     .education_wrapper .education_main {
-      left: 10%; }
+      left: 10%;
+      font-size: 1.8em;
+      height: 30px; }
   .university_wrapper {
     width: 95%;
-    height: 20%; }
+    height: 27%; }
     .university_wrapper .arrow_bottom {
       width: 430px;
       height: calc(100% - 90px);
-      left: 0; }
-  .university_case {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 430px;
-    height: 90px; } }
+      left: 0;
+      opacity: 0; }
+    .university_wrapper .university_case {
+      position: absolute;
+      top: 0;
+      left: calc(50% - 180px);
+      width: 360px;
+      height: 90px; }
+    .university_wrapper .university_text {
+      font-size: 1.3em; }
+  .botton_wrapper {
+    height: 13%; }
+    .botton_wrapper .arrow_bottom {
+      width: 270px; }
+      .botton_wrapper .arrow_bottom:before {
+        top: -450% !important; }
+    .botton_wrapper .botton_case {
+      width: 270px; } }
 
 @keyframes typewriter {
   from {
@@ -1727,7 +1906,7 @@ body {
 @keyframes setMenu {
   from {
     opacity: 0;
-    top: 200px; }
+    top: 1000px; }
   to {
     opacity: 1;
     top: 0; } }
@@ -1735,7 +1914,7 @@ body {
 @media screen and (max-width: 767px) {
   .navbar-collapse.in .navbar_item {
     top: 0;
-    animation: setMenu 0.4s ease forwards;
+    animation: setMenu 5.4s ease forwards;
     transition-delay: 0s;
     animation-duration: 0.4s;
     animation-delay: 0.1s; }
@@ -1787,14 +1966,18 @@ body {
 
 @keyframes setArrowBottom {
   0% {
-    top: 100%; }
+    top: 100%;
+    opacity: 1; }
   30% {
-    top: 0; }
+    top: 0;
+    opacity: 1; }
   70% {
     top: 0;
-    background-position: 0 0; }
+    background-position: 0 0;
+    opacity: 1; }
   100% {
-    background-position: 0 100%; } }
+    background-position: 0 100%;
+    opacity: 1; } }
 
 @keyframes setArrowPart {
   0% {
@@ -1843,13 +2026,13 @@ body {
 
 @keyframes lineWidthHover {
   0% {
-    height: 0;
-    margin-top: 0; }
+    width: 0;
+    margin-left: 0; }
   60% {
     opacity: 1; }
   100% {
-    height: 200%;
-    top: -50%;
+    width: 200%;
+    margin-left: -100%;
     opacity: 1; } }
 
 @keyframes lineHeightSmall {
@@ -1886,6 +2069,16 @@ body {
     width: 100%;
     opacity: 1; } }
 
+@keyframes invert {
+  0% {
+    filter: invert(0); }
+  50% {
+    filter: invert(100%);
+    opacity: 1; }
+  100% {
+    filter: invert(0);
+    opacity: 1; } }
+
 .section4 {
   background: #151515;
   color: #c3c3c3; }
@@ -1914,6 +2107,7 @@ body {
   color: #c3c3c3;
   text-transform: inherit;
   font-weight: 600;
+  margin: 0;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -1992,151 +2186,158 @@ body {
     opacity: 0; }
 
 .section4.active .works_wrapper .arrow_left:before {
-  animation: setArrowLeft 1.2s ease forwards;
+  animation: setArrowLeft .3s ease forwards;
   animation-delay: 1s; }
 
 .section4.active .works_wrapper .arrow_left--part1 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section4.active .works_wrapper .arrow_left--part2 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section4.active .works_wrapper .arrow_top:before {
   animation: setArrowTop 1.2s ease forwards;
-  animation-delay: 1s; }
+  animation-delay: .3s; }
 
 .section4.active .works_wrapper .arrow_top--part1 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section4.active .works_wrapper .arrow_top--part2 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section4.active .works_wrapper .works_case .line_left {
   animation: lineHeight 1.1s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section4.active .works_wrapper .works_case .line_top {
   animation: lineWidth 1.1s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section4.active .works_wrapper .works_case .line_right {
   animation: lineHeight 1.1s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section4.active .works_wrapper .works_case .line_bottom {
   animation: lineWidth 1.1s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section4.active .works_wrapper .works_header {
   animation: logoOpacity .6s ease forwards;
-  animation-delay: 1.9s; }
+  animation-delay: .9s; }
 
 .section4.active .work1_wrapper .arrow_left:before {
   animation: setArrowLeft 1.2s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section4.active .work1_wrapper .arrow_left--part1 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: .9s; }
 
 .section4.active .work1_wrapper .arrow_left--part2 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: .9s; }
 
 .section4.active .work1_wrapper .arrow_bottom:before {
   animation: setArrowBottom 1.2s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section4.active .work1_wrapper .arrow_bottom--part1 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: .9s; }
 
 .section4.active .work1_wrapper .arrow_bottom--part2 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: .9s; }
 
 .section4.active .work1_wrapper .work1_case .line_left {
   animation: lineHeight 1.1s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: .9s; }
 
 .section4.active .work1_wrapper .work1_case .line_top {
   animation: lineWidth 1.1s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: .9s; }
 
 .section4.active .work1_wrapper .work1_case .line_right {
   animation: lineHeight 1.1s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: .9s; }
 
 .section4.active .work1_wrapper .work1_case .line_bottom {
   animation: lineWidth 1.1s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: .9s; }
 
 .section4.active .work1_wrapper .work1_item {
   animation: logoOpacity .6s ease forwards;
-  animation-delay: 1.9s; }
+  animation-delay: 1.2s; }
 
 .section4.active .work2_wrapper .arrow_right:before {
   animation: setArrowRight 1.2s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .9s; }
 
 .section4.active .work2_wrapper .arrow_right--part1 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: 1.2s; }
 
 .section4.active .work2_wrapper .arrow_right--part2 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: 1.2s; }
 
 .section4.active .work2_wrapper_bottom:before {
   animation: setArrowBottom 1.2s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .9s; }
 
 .section4.active .work2_wrapper_bottom--part1 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: 1.2s; }
 
 .section4.active .work2_wrapper_bottom--part2 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: 1.2s; }
 
 .section4.active .work2_wrapper .work2_case .line_left {
   animation: lineHeight 1.1s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: 1.2s; }
 
 .section4.active .work2_wrapper .work2_case .line_top {
   animation: lineWidth 1.1s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: 1.2s; }
 
 .section4.active .work2_wrapper .work2_case .line_right {
   animation: lineHeight 1.1s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: 1.2s; }
 
 .section4.active .work2_wrapper .work2_case .line_bottom {
   animation: lineWidth 1.1s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: 1.2s; }
 
 .section4.active .work2_wrapper .work2_item {
   animation: logoOpacity .6s ease forwards;
-  animation-delay: 1.9s; }
+  animation-delay: 1.5s; }
 
 @media screen and (max-width: 767px) {
   .works_wrapper {
-    height: 10%; }
+    height: 60px;
+    width: 100%; }
     .works_wrapper .arrow_left {
-      width: calc(100% - 144px);
+      width: calc(50% - 75px);
       height: 53px;
       bottom: 0;
       top: auto; }
     .works_wrapper .arrow_top {
-      width: 144px;
-      height: calc(100% - 53px); }
+      width: 150px;
+      height: calc(100% - 53px);
+      left: calc(50% - 75px); }
     .works_wrapper .works_case {
-      width: 144px;
-      height: 53px; }
+      width: 150px;
+      height: 53px;
+      left: calc(50% - 75px); }
+    .works_wrapper .works_header {
+      width: 150px;
+      left: calc(50% - 75px);
+      margin: 0; }
   .works_header {
     font-size: 3.5em;
     margin: 0 auto;
@@ -2166,12 +2367,13 @@ body {
     height: 330px; }
   .work1_wrapper {
     width: calc(50% + 150px);
-    height: 80%; }
+    height: 80%;
+    top: 80px; }
     .work1_wrapper .arrow_left {
       width: calc(100% - 300px);
       height: 300px; }
     .work1_wrapper .arrow_bottom {
-      width: 230px;
+      width: 300px;
       height: calc(100% - 300px); }
     .work1_wrapper .work1_case {
       width: 300px;
@@ -2182,14 +2384,14 @@ body {
       overflow: hidden; }
   .work2_wrapper {
     width: calc(50% + 150px);
-    height: 40%; }
+    height: 55%;
+    top: 400px; }
     .work2_wrapper .arrow_right {
       width: calc(100% - 300px);
       height: 300px; }
     .work2_wrapper .arrow_bottom {
       width: 300px;
-      height: calc(100% - 300px);
-      bottom: -100px; }
+      height: calc(100% - 300px); }
     .work2_wrapper .work2_case {
       width: 300px;
       height: 300px; }
@@ -2199,7 +2401,7 @@ body {
       overflow: hidden; } }
 
 .section5 {
-  background: url("/src/images/contbg.jpg") no-repeat center;
+  background: url("../images/contbg.jpg") no-repeat center;
   background-size: cover; }
 
 .section5:before {
@@ -2303,123 +2505,254 @@ body {
     width: 450px;
     height: 300px; }
 
+.social_wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 15%; }
+  .social_wrapper .arrow_left {
+    width: calc(50% - 95px);
+    height: 60px;
+    top: 0; }
+  .social_wrapper .arrow_right {
+    width: calc(50% - 95px);
+    height: 60px;
+    top: 0; }
+  .social_wrapper .arrow_bottom {
+    left: calc(50% - 95px);
+    width: 190px;
+    height: calc(100% - 60px); }
+    .social_wrapper .arrow_bottom:before {
+      top: -150%; }
+  .social_wrapper .social_case {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 95px);
+    width: 190px;
+    height: 60px; }
+  .social_wrapper .social_list {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 95px);
+    width: 190px;
+    height: 70px;
+    padding: 0; }
+  .social_wrapper .social_item {
+    width: 60px;
+    height: 60px;
+    list-style: none;
+    display: inline-block;
+    opacity: 0; }
+  .social_wrapper .social_link {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    z-index: 500;
+    border-radius: 20%; }
+  .social_wrapper .social_img {
+    background: url("../images/social.png") no-repeat;
+    background-size: 280%;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    filter: brightness(50%); }
+    .social_wrapper .social_img__face {
+      background-position: 0 0; }
+    .social_wrapper .social_img__inst {
+      background-position: -52px 0; }
+    .social_wrapper .social_img__yout {
+      background-position: -107px 0; }
+  .social_wrapper .social_link:hover .social_img {
+    filter: brightness(100%);
+    transition: 0s fast; }
+  .social_wrapper .social_link:hover .line_left {
+    animation: lineHeightHover .4s ease forwards;
+    animation-delay: 0s; }
+  .social_wrapper .social_link:hover .line_top {
+    animation: lineWidthHover .4s ease forwards;
+    animation-delay: 0s; }
+  .social_wrapper .social_link:hover .line_right {
+    animation: lineHeightHover .4s ease forwards;
+    animation-delay: 0s; }
+  .social_wrapper .social_link:hover .line_bottom {
+    animation: lineWidthHover .4s ease forwards;
+    animation-delay: 0s; }
+
 .section5.active .formname_wrapper .arrow_left:before {
   animation: setArrowLeft 1.2s ease forwards;
-  animation-delay: 1s; }
+  animation-delay: .3s; }
 
 .section5.active .formname_wrapper .arrow_left--part1 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section5.active .formname_wrapper .arrow_left--part2 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section5.active .formname_wrapper .arrow_top:before {
   animation: setArrowTop 1.2s ease forwards;
-  animation-delay: 1s; }
+  animation-delay: .3s; }
 
 .section5.active .formname_wrapper .arrow_top--part1 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section5.active .formname_wrapper .arrow_top--part2 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section5.active .formname_wrapper .formname_case .line_left {
   animation: lineHeight 1.1s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section5.active .formname_wrapper .formname_case .line_top {
   animation: lineWidth 1.1s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section5.active .formname_wrapper .formname_case .line_right {
   animation: lineHeight 1.1s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section5.active .formname_wrapper .formname_case .line_bottom {
   animation: lineWidth 1.1s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section5.active .formname_wrapper .formname_name {
   animation: logoOpacity .6s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: .9s; }
 
 .section5.active .mailtous_wrapper .arrow_left:before {
   animation: setArrowLeft 1.2s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section5.active .mailtous_wrapper .arrow_left--part1 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: .9s; }
 
 .section5.active .mailtous_wrapper .arrow_left--part2 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: 1.9s; }
 
 .section5.active .mailtous_wrapper .arrow_top:before {
   animation: setArrowTop 1.2s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section5.active .mailtous_wrapper .arrow_top--part1 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: .9s; }
 
 .section5.active .mailtous_wrapper .arrow_top--part2 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: .9s; }
 
 .section5.active .mailtous_wrapper .arrow_right:before {
   animation: setArrowRight 1.2s ease forwards;
-  animation-delay: 1.3s; }
+  animation-delay: .6s; }
 
 .section5.active .mailtous_wrapper .arrow_right--part1 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: .9s; }
 
 .section5.active .mailtous_wrapper .arrow_right--part2 {
   animation: setArrowPart .6s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: .9s; }
 
 .section5.active .mailtous_wrapper .mailtous_case .line_left {
   animation: lineHeight 1.1s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: .9s; }
 
 .section5.active .mailtous_wrapper .mailtous_case .line_top {
   animation: lineWidth 1.1s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: .9s; }
 
 .section5.active .mailtous_wrapper .mailtous_case .line_right {
   animation: lineHeight 1.1s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: .9s; }
 
 .section5.active .mailtous_wrapper .mailtous_case .line_bottom {
   animation: lineWidth 1.1s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: .9s; }
 
 .section5.active .mailtous_wrapper .formname_name {
   animation: logoOpacity .6s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: 1.2s; }
 
 .section5.active .mailtous_wrapper .control-label {
   animation: logoOpacity .6s ease forwards;
-  animation-delay: 1.6s; }
+  animation-delay: 1.2s; }
 
 .section5.active .mailtous_wrapper .outline_form {
   animation: formWidth 1.1s ease forwards;
-  animation-delay: 1.9s; }
+  animation-delay: 1.2s; }
 
 .section5.active .form-botton {
   animation: logoOpacity .6s ease forwards;
-  animation-delay: 1.9s; }
+  animation-delay: 1.2s; }
+
+.section5.active .social_wrapper .arrow_left:before {
+  animation: setArrowLeft 1.2s ease forwards;
+  animation-delay: .9s; }
+
+.section5.active .social_wrapper .arrow_left--part1 {
+  animation: setArrowPart .6s ease forwards;
+  animation-delay: 1.2s; }
+
+.section5.active .social_wrapper .arrow_left--part2 {
+  animation: setArrowPart .6s ease forwards;
+  animation-delay: 1.2s; }
+
+.section5.active .social_wrapper .arrow_bottom:before {
+  animation: setArrowBottom 1.2s ease forwards;
+  animation-delay: .9s; }
+
+.section5.active .social_wrapper .arrow_bottom--part1 {
+  animation: setArrowPart .6s ease forwards;
+  animation-delay: 1.2s; }
+
+.section5.active .social_wrapper .arrow_bottom--part2 {
+  animation: setArrowPart .6s ease forwards;
+  animation-delay: 1.2s; }
+
+.section5.active .social_wrapper .arrow_right:before {
+  animation: setArrowRight 1.2s ease forwards;
+  animation-delay: .9s; }
+
+.section5.active .social_wrapper .arrow_right--part1 {
+  animation: setArrowPart .6s ease forwards;
+  animation-delay: 1.2s; }
+
+.section5.active .social_wrapper .arrow_right--part2 {
+  animation: setArrowPart .6s ease forwards;
+  animation-delay: 1.2s; }
+
+.section5.active .social_wrapper .social_case .line_left {
+  animation: lineHeight 1.1s ease forwards;
+  animation-delay: 1.2s; }
+
+.section5.active .social_wrapper .social_case .line_top {
+  animation: lineWidth 1.1s ease forwards;
+  animation-delay: 1.2s; }
+
+.section5.active .social_wrapper .social_case .line_right {
+  animation: lineHeight 1.1s ease forwards;
+  animation-delay: 1.2s; }
+
+.section5.active .social_wrapper .social_case .line_bottom {
+  animation: lineWidth 1.1s ease forwards;
+  animation-delay: 1.2s; }
+
+.section5.active .social_wrapper .social_item {
+  animation: invert 1.6s ease forwards;
+  animation-delay: 1.5s; }
 
 @media screen and (max-width: 767px) {
   .formname_wrapper {
     width: 90%;
     right: 0;
-    left: auto; }
+    left: auto;
+    height: 20%; }
     .formname_wrapper .formname_name {
       font-size: 2.5em;
       left: 0; }
@@ -2440,7 +2773,63 @@ body {
     width: calc(90% - 300px); }
   .mailtous_wrapper .mailtous_case {
     left: 10%;
-    width: 300px; } }
+    width: 300px; }
+  .social_wrapper .arrow_bottom:before {
+    top: -230% !important; } }
+
+.page404 {
+  background: url("../images/headerbg.jpg") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  margin: 0; }
+
+.text404 {
+  color: #c3c3c3;
+  font-size: 5em;
+  margin: 0 auto;
+  padding: 25% 0 0;
+  text-align: center; }
+
+.info404 {
+  color: #c3c3c3;
+  font-size: 2em;
+  margin: 0 auto;
+  padding: 30px 0;
+  text-align: center; }
+
+.botton404 {
+  margin: 0 auto;
+  padding: 50px 0 0;
+  text-align: center;
+  width: 280px; }
+  .botton404_link {
+    width: 280px;
+    height: 70px;
+    color: #c3c3c3;
+    font-size: 1.3em;
+    text-decoration: none;
+    background: transparent;
+    padding: 20px 40px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 2px solid #c3c3c3; }
+    .botton404_link:hover {
+      color: #000;
+      background: #c3c3c3;
+      text-decoration: none; }
+
+@media screen and (max-width: 767px) {
+  .text404 {
+    font-size: 3em;
+    padding: 45% 0 0; }
+  .info404 {
+    font-size: 1.5em; }
+  .botton404_link {
+    font-size: 1.3em; } }
+
+.section {
+  position: relative; }
 
 .loader_box {
   position: fixed;
@@ -2450,14 +2839,15 @@ body {
   right: 0;
   z-index: 999;
   background: #000;
-  opacity: 0.9; }
+  opacity: 0.9;
+  width: 100%; }
   .loader_box .loader {
     height: 60px;
     width: 200px;
     margin: -30px auto 0;
     right: 0;
     left: 0;
-    top: 50%;
+    top: 35%;
     display: inline-block;
     position: absolute;
     transition: all 0.3s ease-in-out;

@@ -1,5 +1,5 @@
 .section5
-  background: url("/src/images/contbg.jpg") no-repeat center
+  background: url("../images/contbg.jpg") no-repeat center
   background-size: cover
 
 .section5:before
@@ -117,6 +117,101 @@
     height: 300px
 
 
+.social_wrapper
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 15%
+
+  .arrow
+    &_left
+      width: calc(50% - 95px)
+      height: 60px
+      top: 0
+
+    &_right
+      width: calc(50% - 95px)
+      height: 60px
+      top: 0
+
+    &_bottom
+      left: calc(50% - 95px)
+      width: 190px
+      height: calc(100% - 60px)
+
+      &:before
+        top: -150%
+
+  .social_case
+    position: absolute
+    top: 0
+    left: calc(50% - 95px)
+    width: 190px
+    height: 60px
+
+  .social_list
+    position: absolute
+    top: 0
+    left: calc(50% - 95px)
+    width: 190px
+    height: 70px
+    padding: 0
+
+  .social_item
+    width: 60px
+    height: 60px
+    list-style: none
+    display: inline-block
+    opacity: 0
+
+
+  .social_link
+    width: 60px
+    height: 60px
+    position: absolute
+    z-index: 500
+    border-radius: 20%
+
+  .social_img
+    background: url("../images/social.png") no-repeat
+    background-size: 280%
+    display: inline-block
+    height: 100%
+    width: 100%
+    filter: brightness(50%)
+    &__face
+      background-position: 0 0
+    &__inst
+      background-position: -52px 0
+    &__yout
+      background-position: -107px 0
+
+  .social_link:hover
+
+    .social_img
+      filter: brightness(100%)
+      transition: 0s fast
+
+
+    .line
+      &_left
+        animation: lineHeightHover .4s ease forwards
+        animation-delay: 0s
+      &_top
+        animation: lineWidthHover .4s ease forwards
+        animation-delay: 0s
+
+      &_right
+        animation: lineHeightHover .4s ease forwards
+        animation-delay: 0s
+
+      &_bottom
+        animation: lineWidthHover .4s ease forwards
+        animation-delay: 0s
+
+
+
 
 .section5.active
 
@@ -128,27 +223,27 @@
 
         &:before
           animation: setArrowLeft 1.2s ease forwards
-          animation-delay: 1s
+          animation-delay: .3s
         &--part1
           animation: setArrowPart .6s ease forwards
-          animation-delay: 1.3s
+          animation-delay: .6s
         &--part2
           animation: setArrowPart .6s ease forwards
-          animation-delay: 1.3s
+          animation-delay: .6s
 
       &_top
 
         &:before
           animation: setArrowTop 1.2s ease forwards
-          animation-delay: 1s
+          animation-delay: .3s
 
         &--part1
           animation: setArrowPart .6s ease forwards
-          animation-delay: 1.3s
+          animation-delay: .6s
 
         &--part2
           animation: setArrowPart .6s ease forwards
-          animation-delay: 1.3s
+          animation-delay: .6s
 
     .formname_case
 
@@ -156,23 +251,23 @@
 
         &_left
           animation: lineHeight 1.1s ease forwards
-          animation-delay: 1.3s
+          animation-delay: .6s
 
         &_top
           animation: lineWidth 1.1s ease forwards
-          animation-delay: 1.3s
+          animation-delay: .6s
 
         &_right
           animation: lineHeight 1.1s ease forwards
-          animation-delay: 1.3s
+          animation-delay: .6s
 
         &_bottom
           animation: lineWidth 1.1s ease forwards
-          animation-delay: 1.3s
+          animation-delay: .6s
 
     .formname_name
       animation: logoOpacity .6s ease forwards
-      animation-delay: 1.6s
+      animation-delay: .9s
 
 
   .mailtous_wrapper
@@ -183,41 +278,41 @@
 
         &:before
           animation: setArrowLeft 1.2s ease forwards
-          animation-delay: 1.3s
+          animation-delay: .6s
         &--part1
           animation: setArrowPart .6s ease forwards
-          animation-delay: 1.6s
+          animation-delay: .9s
         &--part2
           animation: setArrowPart .6s ease forwards
-          animation-delay: 1.6s
+          animation-delay: 1.9s
 
       &_top
 
         &:before
           animation: setArrowTop 1.2s ease forwards
-          animation-delay: 1.3s
+          animation-delay: .6s
 
         &--part1
           animation: setArrowPart .6s ease forwards
-          animation-delay: 1.6s
+          animation-delay: .9s
 
         &--part2
           animation: setArrowPart .6s ease forwards
-          animation-delay: 1.6s
+          animation-delay: .9s
 
       &_right
 
         &:before
           animation: setArrowRight 1.2s ease forwards
-          animation-delay: 1.3s
+          animation-delay: .6s
 
         &--part1
           animation: setArrowPart .6s ease forwards
-          animation-delay: 1.6s
+          animation-delay: .9s
 
         &--part2
           animation: setArrowPart .6s ease forwards
-          animation-delay: 1.6s
+          animation-delay: .9s
 
     .mailtous_case
 
@@ -225,35 +320,102 @@
 
         &_left
           animation: lineHeight 1.1s ease forwards
-          animation-delay: 1.6s
+          animation-delay: .9s
 
         &_top
           animation: lineWidth 1.1s ease forwards
-          animation-delay: 1.6s
+          animation-delay: .9s
 
         &_right
           animation: lineHeight 1.1s ease forwards
-          animation-delay: 1.6s
+          animation-delay: .9s
 
         &_bottom
           animation: lineWidth 1.1s ease forwards
-          animation-delay: 1.6s
+          animation-delay: .9s
 
     .formname_name
       animation: logoOpacity .6s ease forwards
-      animation-delay: 1.6s
+      animation-delay: 1.2s
 
     .control-label
       animation: logoOpacity .6s ease forwards
-      animation-delay: 1.6s
+      animation-delay: 1.2s
 
     .outline_form
       animation: formWidth 1.1s ease forwards
-      animation-delay: 1.9s
+      animation-delay: 1.2s
 
   .form-botton
     animation: logoOpacity .6s ease forwards
-    animation-delay: 1.9s
+    animation-delay: 1.2s
+
+
+  .social_wrapper
+
+    .arrow
+      &_left
+
+        &:before
+          animation: setArrowLeft 1.2s ease forwards
+          animation-delay: .9s
+        &--part1
+          animation: setArrowPart .6s ease forwards
+          animation-delay: 1.2s
+        &--part2
+          animation: setArrowPart .6s ease forwards
+          animation-delay: 1.2s
+
+      &_bottom
+
+        &:before
+          animation: setArrowBottom 1.2s ease forwards
+          animation-delay: .9s
+
+        &--part1
+          animation: setArrowPart .6s ease forwards
+          animation-delay: 1.2s
+
+        &--part2
+          animation: setArrowPart .6s ease forwards
+          animation-delay: 1.2s
+
+      &_right
+
+        &:before
+          animation: setArrowRight 1.2s ease forwards
+          animation-delay: .9s
+
+        &--part1
+          animation: setArrowPart .6s ease forwards
+          animation-delay: 1.2s
+
+        &--part2
+          animation: setArrowPart .6s ease forwards
+          animation-delay: 1.2s
+
+    .social_case
+      .line
+
+        &_left
+          animation: lineHeight 1.1s ease forwards
+          animation-delay: 1.2s
+
+        &_top
+          animation: lineWidth 1.1s ease forwards
+          animation-delay: 1.2s
+
+        &_right
+          animation: lineHeight 1.1s ease forwards
+          animation-delay: 1.2s
+
+        &_bottom
+          animation: lineWidth 1.1s ease forwards
+          animation-delay: 1.2s
+
+    .social_item
+      animation: invert 1.6s ease forwards
+      animation-delay: 1.5s
 
 
 
@@ -263,6 +425,7 @@
     width: 90%
     right: 0
     left: auto
+    height: 20%
 
     .formname_name
       font-size: 2.5em
@@ -279,6 +442,7 @@
 
   .mailtous_wrapper
 
+
     .mailtous
       width: 300px
       left: 10%
@@ -293,3 +457,9 @@
     .mailtous_case
       left: 10%
       width: 300px
+
+  .social_wrapper
+    .arrow
+      &_bottom
+        &:before
+          top: -230% !important

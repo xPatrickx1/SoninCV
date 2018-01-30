@@ -7,41 +7,34 @@ html(lang='en')
 
     title Evgeniy Sonin
 
-    link(href='/src/styles/css/style.css', rel='stylesheet')
-    link(rel="icon", type="image/png", href="/src/images/favicon.png")
-    link(href='/lib/bootstrap.css', rel='stylesheet')
-    link(href='/lib/jquery.fullPage.css', rel='stylesheet')
+    link(href='src/css/style.css', rel='stylesheet')
+    link(rel="icon", type="image/png", href="src/images/favicon16.png")
+    link(rel="icon", type="image/png", href="src/images/favicon32.png")
+    link(href='lib/bootstrap.css', rel='stylesheet')
+    link(href='lib/jquery.fullPage.css', rel='stylesheet')
 
+    //script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
+    //script(type="text/javascript" src="lib/bootstrap.min.js")
     script(type="text/javascript" src="lib/jquery-3.2.1.min.js")
-    //script(type="text/javascript" src="lib/jquery.fullPage.js")
-    script(type="text/javascript" src="lib/jquery.fullpage.min.js")
-
-
-    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
+    script(type="text/javascript" src="lib/jquery.fullpage.js")
     script(type="text/javascript" src="src/js/main.js")
+
+    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-113142222-1')
+    script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-113142222-1');
+
+
 
   body
 
     .loader_box
       .loader
         p.line-1.anim-typewriter made by sonin
-
-    //nav.navbar.navbar-default.col-sm-offset-5.col-md-offset-5
-      .container-fluid
-        .navbar-header
-          button.navbar-toggle.collapsed.hamburger-menu(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
-            .bar
-
-        #bs-example-navbar-collapse-1.collapse.navbar-collapse
-          ul.nav.navbar-nav.navbar_list#menu
-            li.navbar_item(data-menuanchor='secondPage')
-              a.navbar_link(href='#secondPage') skills
-            li.navbar_item(data-menuanchor='3rdPage')
-              a.navbar_link(href='#3rdPage') biography
-            li.navbar_item(data-menuanchor='4thPage')
-              a.navbar_link(href='#4thPage') works
-            li.navbar_item(data-menuanchor='5thPage')
-              a.navbar_link(href='#5thPage') contacts
 
 
     #fullpage
@@ -51,7 +44,6 @@ html(lang='en')
         header
           .menu_wrapper
             span.arrow_right.arrow_menu
-              svg
               span.arrow_right--part1
               span.arrow_right--part2
 
@@ -74,8 +66,6 @@ html(lang='en')
                   ul.nav.navbar-nav.navbar_list
                     li.navbar_item
                       a.navbar_link(href='#secondPage') skills
-                        .hover_top
-                        .hover_side
                     li.navbar_item
                       a.navbar_link(href='#3rdPage') biography
                     li.navbar_item
@@ -85,24 +75,21 @@ html(lang='en')
 
           .logo_wrapper
             span.arrow_left
-              svg
               span.arrow_left--part1
               span.arrow_left--part2
 
             span.arrow_top
               span.arrow_top--part1
               span.arrow_top--part2
-            //.logo_case
-              span.line.line_horizontal
-              span.line.line_vertical
+
             .logo_case
               span.line.line_left
               span.line.line_top
               span.line.line_bottom
               span.line.line_right
 
-              a.logo.animation(href='index.html')
-                span.logo_img
+            a.logo(href='index.html')
+              span.logo_img
 
 
 
@@ -111,7 +98,6 @@ html(lang='en')
 
         .title_wrapper
           span.arrow_left.arrow_title
-            svg
             span.arrow_left--part1
             span.arrow_left--part2
 
@@ -144,11 +130,10 @@ html(lang='en')
 
         .skills_wrapper
           span.arrow_left
-            svg
             span.arrow_left--part1
             span.arrow_left--part2
 
-          span.arrow_top.mov
+          span.arrow_top
             span.arrow_top--part1
             span.arrow_top--part2
 
@@ -164,9 +149,8 @@ html(lang='en')
 
         .level_wrapper
           span.arrow_left
-            svg
-            span.arrow_left--part1.mov
-            span.arrow_left--part2.mov
+            span.arrow_left--part1
+            span.arrow_left--part2
 
           span.arrow_bottom
             span.arrow_bottom--part1
@@ -236,14 +220,13 @@ html(lang='en')
 
         .experience_wrapper
           span.arrow_left
-            svg
             span.arrow_left--part1
             span.arrow_left--part2
           span.arrow_top
             span.arrow_top--part1
             span.arrow_top--part2
 
-          .experience_case.mov
+          .experience_case
             span.line.line_left
             span.line.line_top
             span.line.line_bottom
@@ -254,7 +237,6 @@ html(lang='en')
 
         .experience1_wrapper
           span.arrow_right
-            svg
             span.arrow_right--part1
             span.arrow_right--part2
 
@@ -284,15 +266,14 @@ html(lang='en')
 
         .experience2_wrapper
           span.arrow_right
-            svg
             span.arrow_right--part1
             span.arrow_right--part2
 
           .experience2_case
-            span.line.line_left.mov
-            span.line.line_top.mov
-            span.line.line_bottom.mov
-            span.line.line_right.mov
+            span.line.line_left
+            span.line.line_top
+            span.line.line_bottom
+            span.line.line_right
 
           .experience2_block
 
@@ -311,7 +292,6 @@ html(lang='en')
 
         .education_wrapper
           span.arrow_left
-            svg
             span.arrow_left--part1
             span.arrow_left--part2
 
@@ -330,7 +310,6 @@ html(lang='en')
 
         .university_wrapper
           span.arrow_right
-            svg
             span.arrow_right--part1
             span.arrow_right--part2
 
@@ -374,7 +353,7 @@ html(lang='en')
             span.line.line_right
 
           .botton
-              a.botton_link(href='/src/Resume Sonin.Ievgen.pdf') download resume
+              a.botton_link(href='src/Resume Sonin.Ievgen.pdf') download resume
 
 
 
@@ -383,7 +362,6 @@ html(lang='en')
       .section.section4#section4
         .works_wrapper
           span.arrow_left
-            svg
             span.arrow_left--part1
             span.arrow_left--part2
 
@@ -401,7 +379,6 @@ html(lang='en')
 
         .work1_wrapper
           span.arrow_left
-            svg
             span.arrow_left--part1
             span.arrow_left--part2
 
@@ -417,12 +394,11 @@ html(lang='en')
 
           .work1_item
             a.works_link.col(href='#')
-              img.works_img(src='/src/images/siteAO.jpg')
+              img.works_img(src='src/images/siteAO.jpg')
 
 
         .work2_wrapper
           span.arrow_right
-            svg
             span.arrow_right--part1
             span.arrow_right--part2
 
@@ -438,7 +414,7 @@ html(lang='en')
 
           .work2_item
             a.works_link.col(href='#')
-              img.works_img(src='/src/images/sitevideopro.jpg')
+              img.works_img(src='src/images/sitevideopro.jpg')
 
 
 
@@ -501,6 +477,49 @@ html(lang='en')
 
               .form-group.form-botton
                 button.btn.btn-default(type='submit') send
+
+        .social_wrapper
+          span.arrow_left
+            span.arrow_left--part1
+            span.arrow_left--part2
+
+          span.arrow_right
+            span.arrow_right--part1
+            span.arrow_right--part2
+
+          span.arrow_bottom
+            span.arrow_bottom--part1
+            span.arrow_bottom--part2
+
+          .social_case
+            span.line.line_left
+            span.line.line_top
+            span.line.line_bottom
+            span.line.line_right
+
+          ul.social_list
+            li.social_item
+              a.social_link(href='https://www.facebook.com/profile.php?id=100004749393965')
+                span.social_img.social_img__face
+                span.line.line_left
+                span.line.line_top
+                span.line.line_bottom
+                span.line.line_right
+            li.social_item
+              a.social_link(href='https://www.instagram.com/xpatrickx75/')
+                span.social_img.social_img__inst
+                span.line.line_left
+                span.line.line_top
+                span.line.line_bottom
+                span.line.line_right
+            li.social_item
+              a.social_link(href='https://www.youtube.com/channel/UCVvlLrdi5R2yOfuve0rNP9A?view_as=subscriber')
+                span.social_img.social_img__yout
+                span.line.line_left
+                span.line.line_top
+                span.line.line_bottom
+                span.line.line_right
+
 
 
 

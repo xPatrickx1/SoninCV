@@ -1,12 +1,21 @@
 body {
   font-family: sans-serif;
-  transition: all 3s ease; }
+  transition: all 3s ease;
+  margin: 0;
+  font-size: 0.9em; }
 
 * {
   box-sizing: inherit;
   transition-property: all;
   transition-duration: .5s;
   transition-timing-function: ease; }
+
+.section {
+  overflow: hidden; }
+
+.loader_box {
+  width: 1000px;
+  height: 1000px; }
 
 .section1.active .arrow_left:before {
   animation: setArrowLeft 1.2s ease forwards;
@@ -409,30 +418,6 @@ body {
   top: 0;
   width: 80%; }
 
-.navbar_link .hover_top:after, .navbar_link .hover_top:before {
-  backface-visibility: hidden;
-  border: 1px solid rgba(255, 255, 255, 0);
-  bottom: 0;
-  content: " ";
-  display: block;
-  margin: 0 auto;
-  position: relative;
-  transition: all 280ms ease-in-out;
-  width: 0; }
-
-.navbar_link .hover_top:hover:after, .navbar_link .hover_top:hover:before {
-  backface-visibility: hidden;
-  border-color: #c3c3c3;
-  transition: width 350ms ease-in-out;
-  width: 80%;
-  height: 2px;
-  background: linear-gradient(to right, transparent, #c3c3c3, transparent); }
-
-.navbar_link:hover:before {
-  bottom: auto;
-  top: 0;
-  width: 80%; }
-
 .bar {
   width: 50px;
   height: 5px;
@@ -493,20 +478,20 @@ body {
   transition: all 0.5s ease;
   opacity: 0; }
   .logo .logo_img {
-    background: url("/src/images/logo.png") no-repeat center center;
+    background: url("../images/logo.png") no-repeat center center;
     background-size: 100%;
     display: inline-block;
     height: 100%;
     width: 100%; }
 
 .logo .logo_img:hover {
-  background: url("/src/images/logoSun.png") no-repeat center center;
+  background: url("../images/logoSun.png") no-repeat center center;
   background-size: 100%;
   transition: background 0.5s ease; }
 
 .section1 {
   padding: 0 15%;
-  background: url("/src/images/headerbg.jpg") no-repeat center;
+  background: url("../images/headerbg.jpg") no-repeat center;
   background-size: cover;
   width: 100%;
   height: 100vh;
@@ -565,9 +550,16 @@ body {
   .title_case h1 {
     font-size: 2.3em; }
 
+@media screen and (max-width: 600px) {
+  .header_me .header_img {
+    left: 0 !important;
+    margin: 0 !important;
+    right: auto; } }
+
 @media screen and (max-width: 767px) {
   .section1 {
-    padding: 0; }
+    padding: 0;
+    background: linear-gradient(to bottom, #211d12 0%, #432914 100%); }
   .arrow_left {
     top: 40px;
     height: 80px;
@@ -609,8 +601,6 @@ body {
       top: 50px; }
   .hamburger-menu {
     margin-top: 50px;
-    animation: logoOpacity .6s ease forwards;
-    animation-delay: 3s;
     opacity: 0; }
   .navbar_list {
     background: transparent; }
@@ -625,6 +615,10 @@ body {
     animation-delay: 0s; }
   .navbar_link:after, .navbar_link:before {
     border: none; }
+  .navbar_link:hover:after, .navbar_link:hover:before {
+    width: 0; }
+  .navbar_link:hover:before {
+    width: 0; }
   .navbar-collapse.in .navbar_item {
     top: 0;
     vertical-align: middle;
@@ -637,17 +631,18 @@ body {
     border-bottom: 1px solid #c3c3c3; }
   .section1 {
     overflow: hidden; }
-  .header_me {
-    width: 100% !important;
-    overflow: hidden;
-    right: 0;
-    left: 0; }
-  .header_img {
-    position: relative;
-    height: 100%;
-    right: 0;
-    left: 0;
-    bottom: -45% !important; }
+    .section1 .header_me {
+      width: 100%;
+      overflow: hidden;
+      right: 0;
+      left: 0; }
+      .section1 .header_me .header_img {
+        position: absolute;
+        height: auto;
+        left: 50%;
+        margin-left: -200px;
+        width: 400px;
+        bottom: -280px; }
   .title_wrapper {
     position: absolute;
     bottom: 0;
@@ -662,17 +657,20 @@ body {
     .title_wrapper .arrow_bottom {
       width: 330px;
       height: calc(100% - 230px); }
-  .title_case {
-    width: 330px;
-    height: 230px;
-    animation-delay: 2.5s; }
-  .title {
-    vertical-align: top;
-    top: 150px;
-    padding: 0;
-    font-size: 1.7em;
-    right: 0;
-    max-width: 330px; } }
+    .title_wrapper .title_case {
+      width: 330px;
+      height: 230px;
+      animation-delay: 2.5s; }
+    .title_wrapper .title {
+      vertical-align: top;
+      top: 40px;
+      padding: 0;
+      font-size: 1.7em;
+      right: 0;
+      max-width: 330px; }
+  .section1.active .hamburger-menu {
+    animation: logoOpacity .6s ease forwards;
+    animation-delay: 3s; } }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .menu_wrapper {

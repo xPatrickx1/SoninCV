@@ -9,6 +9,7 @@ $(document).ready(function() {
     (function () {
         $('.hamburger-menu').on('click', function() {
             $('.bar').toggleClass('animate');
+            $('.navbar-collapse').toggleClass('in');
         })
     })();
 
